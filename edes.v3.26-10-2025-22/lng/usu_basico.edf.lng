@@ -1,0 +1,16 @@
+[Language] es,ca,en,fr,cs
+Apellidos|Apellidos|Cognoms|Surnames|Apellidos
+DNI|DNI|DNI|DNI|DNI
+E-Mail|E-Mail|E-Mail|E-Mail|E-Mail
+Idioma|Idioma|Idioma|Language|Idioma
+Local|Local|Local|Local|Local
+Nombre|Nombre|Nom|Name|Nombre
+Segundo Teléfono|Segundo Teléfono|Segon Telèfon|Second phone|Segundo Teléfono
+Teléfonos|Teléfonos|Telèfons|Phones|Teléfonos
+titulo_lng|Seleccionar idioma|SELECCIONAR IDIOMA|Select language|SELECCIONAR IDIOMA
+titulo|Datos basicos del usuario|DADES BÀSIQUES DE L´USUARI|Basic user data|DATOS BASICOS DEL USUARIO
+Usuario|Usuario|Usuari|User|Usuario
+
+Selecciona idioma|Selecciona idioma|Seleccionar idioma|Select language|Sélectionner la langue|Vyberte jazyk
+
+mensaje|El idioma se ha actualizado correctamente.<br><br>Los cambios serán visibles inmediatamente en nuevas pantallas y opciones que utilice.<br>Para que la interfaz principal se actualice al nuevo idioma, será necesario reiniciar la aplicación.|L'idioma s'ha actualitzat correctament.<br><br>Els canvis seran visibles immediatament en noves pantalles i opcions que utilitzeu.<br>Perquè la interfície principal s'actualitzi al nou idioma, caldrà reiniciar l'aplicació.|The language has been updated successfully.<br><br>The changes will be visible immediately on new screens and options you use.<br>For the main interface to update to the new language, you will need to restart the application.|La langue a été mise à jour avec succès.<br><br>Les modifications seront visibles immédiatement sur les nouveaux écrans et options que vous utilisez.<br>Pour que l'interface principale soit mise à jour vers la nouvelle langue, vous devrez redémarrer l'application.|Jazyk byl úspěšně aktualizován.<br><br>Změny se okamžitě projeví na nových obrazovkách a možnostech, které použijete.<br>Aby se hlavní rozhraní aktualizovalo na nový jazyk, budete muset aplikaci restartovat.

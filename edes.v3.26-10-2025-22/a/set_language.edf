@@ -1,0 +1,43 @@
+[MyData]cd_gs_user=_User
+#include(*) $lng/usu_basico.edf.lng
+[Title]@Selecciona idioma@
+[DBTable]{$_ENV['SYSDB']}gs_user
+[DBIndex]cd_gs_user
+[DBSerial]cd_gs_user
+[FormButtons]
+[NoButton]cR
+[Stop]
+[MsgAnswer]M|@mensaje@
+[Radio]cd_gs_language|1F|select cd_gs_language, nm_gs_language from {$_ENV['SYSDB']}gs_language where tf_translation='{$_ENV['ON']}' order by nm_gs_language
+[Fields]
+|cd_gs_user|+|T|5||*||_User|
+|cd_gs_language|n|R|20||M|@LNG@||
+[PHPIni]M
+SS::query( "select cd_gs_language from {$_ENV['SYSDB']}gs_user where cd_gs_user={$cd_gs_user}" );
+list( $cd_gs_languageBAK ) = SS::get("num");
+if( $cd_gs_languageBAK != $_vF['cd_gs_language'] ){
+$_SESSION["_LANGUAGE_"] = $_vF['cd_gs_language'];
+setCookie("e-language", $_SESSION["_LANGUAGE_"], time()+(86400*365));
+eLngLoad('$lng/usu_basico.edf.lng', '', 1);
+$_MSGANSWER[0] = $__Lng["mensaje"];
+}
+[CSSAdd]mR
+.TABFootButton {
+text-align: center;
+}
+#TABBody {
+text-align: center;
+display: table-cell;
+display: flex;
+justify-content: center;
+}
+#TABNumber1 > tbody > tr:nth-child(2) > td:nth-child(1) {
+border: 1px solid green;
+display:none;
+}
+fieldset {
+border: none;
+margin-left:0;
+margin-top:1rem;
+margin-bottom:1rem;
+}

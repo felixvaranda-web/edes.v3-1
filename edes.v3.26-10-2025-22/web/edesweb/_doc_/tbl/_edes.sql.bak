@@ -1,0 +1,374 @@
+# --------------------
+# GESTION DE OPCIONES
+# --------------------
+
+CREATE TABLE gs_tree (
+	cod_gs_tree int(10) unsigned NOT NULL auto_increment,
+	nom_gs_tree varchar(100) NOT NULL,
+	cod_tree char(10),
+	filename varchar(100) NOT NULL,
+	permission char(1),
+	extract char(1),
+	print char(1),
+	excel char(1),
+	pdf char(1),
+	email char(1),
+	news char(1),
+	warnings  smallint(6) DEFAULT "0" NOT NULL,
+	description varchar(255),
+	PRIMARY KEY (cod_gs_tree),
+	UNIQUE nom_gs_tree (nom_gs_tree)
+);
+
+CREATE TABLE gs_option (
+	cod_tree varchar(10),
+	seq int(11) DEFAULT "0" NOT NULL,
+	seq_parent int(11) DEFAULT "0" NOT NULL,
+	indent smallint(6) DEFAULT "0" NOT NULL,
+	caption varchar(255),
+	tip varchar(255),
+	type char(1) NOT NULL,
+	id int(11) DEFAULT "0" NOT NULL,
+	script_url varchar(255),
+	subtree_opt varchar(255),
+	UNIQUE cod_tree (cod_tree,id)
+);
+
+# ------------
+# ESTADISTICA
+# ------------
+
+CREATE TABLE gs_navegador (
+   cod_gs_navegador int(10) unsigned NOT NULL auto_increment,
+   nom_gs_navegador varchar(50) NOT NULL,
+   nombre varchar(30) NOT NULL,
+   resolucion varchar(12) NOT NULL,
+   varios varchar(7) NOT NULL,
+   PRIMARY KEY (cod_gs_navegador),
+   UNIQUE cod_gs_navegador (cod_gs_navegador),
+   KEY gs_navegador2 (nom_gs_navegador, nombre, resolucion, varios)
+);
+
+
+CREATE TABLE gs_conexion (
+   id varchar(40) NOT NULL,
+   exe char(1) NOT NULL,
+   arbol smallint(3) unsigned DEFAULT '0' NOT NULL,
+   cod_usuario smallint(6) DEFAULT '0' NOT NULL,
+   cdi datetime,
+   conexion int(10) unsigned NOT NULL auto_increment,
+   cod_gs_navegador tinyint(4) DEFAULT '0' NOT NULL,
+   ip varchar(15) NOT NULL,
+   cod_nodo smallint(6) DEFAULT '0' NOT NULL,
+   sg_carga smallint(6) DEFAULT '0' NOT NULL,
+   cdi_fin datetime,
+   zip char(1) NOT NULL,
+   cod_gs_pc smallint(6),
+   sesion mediumtext NOT NULL,
+   PRIMARY KEY (conexion),
+   UNIQUE conexion (conexion),
+   KEY conexion_2 (conexion),
+   KEY id (id)
+);
+
+CREATE TABLE gs_acceso (
+   cod_gs_toperacion char(3) NOT NULL,
+   conexion int(10) unsigned DEFAULT '0' NOT NULL,
+   objeto char(1) NOT NULL,
+   modo char(2) NOT NULL,
+   edf varchar(40) NOT NULL,
+   parametros varchar(80) NOT NULL,
+   cdi datetime,
+   pagina varchar(80) NOT NULL,
+   parametro varchar(80) NOT NULL,
+   registros int(10) unsigned DEFAULT '0' NOT NULL,
+   uso_cpu int(10) unsigned DEFAULT '0' NOT NULL,
+   num_acceso int(4) NOT NULL auto_increment,
+   byts int(10) unsigned DEFAULT '0' NOT NULL,
+   cod_nodo smallint(5) unsigned DEFAULT '0' NOT NULL,
+   cod_usuario smallint(5) unsigned DEFAULT '0' NOT NULL,
+   PRIMARY KEY (num_acceso),
+   UNIQUE num_acceso (num_acceso),
+   KEY parametro (parametro, num_acceso)
+);
+
+CREATE TABLE gs_toperacion (
+   cod_gs_toperacion char(3) NOT NULL,
+   nom_gs_toperacion varchar(40) NOT NULL,
+   orden smallint(5) unsigned DEFAULT '0' NOT NULL,
+   grupo varchar(10) NOT NULL,
+   activa char(1) NOT NULL,
+   PRIMARY KEY (cod_gs_toperacion),
+   UNIQUE cod_gs_toperacion (cod_gs_toperacion),
+   KEY cod_gs_toperacion_2 (cod_gs_toperacion)
+);
+
+# ------------------------
+
+CREATE TABLE gs_error (
+   codigo int(5) unsigned NOT NULL auto_increment,
+   cdi datetime,
+   cod_usuario smallint(5) unsigned DEFAULT '0' NOT NULL,
+   tipo char(1) NOT NULL,
+   desde varchar(40) NOT NULL,
+   fichero varchar(40) NOT NULL,
+   linea int(5) DEFAULT '0' NOT NULL,
+   texto varchar(50) NOT NULL,
+   trace tinytext NOT NULL,
+   PRIMARY KEY (codigo),
+   UNIQUE codigo (codigo),
+   KEY codigo_2 (codigo),
+   KEY cdi (cdi)
+);
+
+CREATE TABLE gs_log (
+   cdi datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+   operacion char(1) NOT NULL,
+   cod_usuario int(11) DEFAULT '0' NOT NULL,
+   tabla varchar(15) NOT NULL,
+   clave varchar(20) NOT NULL,
+   sql varchar(255) NOT NULL,
+   PRIMARY KEY (cdi)
+);
+
+# -------------
+# EXTRACCIONES
+# -------------
+
+CREATE TABLE gs_entidad (
+   nom_gs_entidad char(30) NOT NULL,
+   cod_gs_entidad smallint(3) NOT NULL auto_increment,
+   tabla char(20) DEFAULT '0' NOT NULL,
+   PRIMARY KEY (cod_gs_entidad)
+);
+
+CREATE TABLE gs_grupo (
+   cod_gs_entidad tinyint(3) DEFAULT '0' NOT NULL,
+   cod_gs_grupo int(10) unsigned NOT NULL auto_increment,
+   nom_gs_grupo char(30),
+   nota char(45),
+   orden smallint(6),
+   PRIMARY KEY (cod_gs_grupo),
+   UNIQUE gs_grupo1 (cod_gs_grupo),
+   KEY gs_grupo2 (cod_gs_grupo, nom_gs_grupo, cod_gs_entidad)
+);
+
+CREATE TABLE gs_campo (
+   cod_gs_campo int(10) unsigned NOT NULL auto_increment,
+   tabla varchar(15) NOT NULL,
+   campo varchar(20) NOT NULL,
+   tipo varchar(255) NOT NULL,
+   ancho tinyint(4) DEFAULT '0' NOT NULL,
+   decimales tinyint(4) DEFAULT '0' NOT NULL,
+   cod_gs_entidad smallint(3) DEFAULT '0' NOT NULL,
+   cod_gs_grupo smallint(6) DEFAULT '0' NOT NULL,
+   orden smallint(6) DEFAULT '0' NOT NULL,
+   etiqueta varchar(15) NOT NULL,
+   nivel smallint(6) DEFAULT '0' NOT NULL,
+   alineacion char(1) NOT NULL,
+   relacion varchar(255) NOT NULL,
+   descripcion varchar(255) NOT NULL,
+   PRIMARY KEY (cod_gs_campo),
+   UNIQUE cod_campo (cod_gs_campo),
+   KEY cod_campo_2 (cod_gs_campo, cod_gs_entidad, cod_gs_grupo, orden, etiqueta)
+);
+
+CREATE TABLE gs_formato (
+   cod_gs_formato int(5) unsigned NOT NULL auto_increment,
+   cod_usuario smallint(5) unsigned DEFAULT '0' NOT NULL,
+   cod_gs_entidad tinyint(1) DEFAULT '0' NOT NULL,
+   grupo varchar(20) NOT NULL,
+   nom_gs_formato varchar(60) NOT NULL,
+   orientacion char(1) NOT NULL,
+   tipo_letra varchar(50) NOT NULL,
+   ancho_letra smallint(5) unsigned DEFAULT '0' NOT NULL,
+   titulo_list varchar(255) NOT NULL,
+   descripcion varchar(255) NOT NULL,
+   formato varchar(255) NOT NULL,
+   cabecera varchar(255) NOT NULL,
+   operacion varchar(255) NOT NULL,
+   ordenacion varchar(14) NOT NULL,
+   destino char(1) NOT NULL,
+   PRIMARY KEY (cod_gs_formato),
+   UNIQUE cod_formato (cod_gs_formato),
+   KEY cod_formato_2 (cod_gs_formato)
+);
+
+CREATE TABLE gs_exp_file (
+   cod_usuario int(11) DEFAULT '0' NOT NULL,
+   estado char(1) NOT NULL,
+   tipo char(1) NOT NULL,
+   formato tinyint(3) unsigned DEFAULT '0' NOT NULL,
+   comprimido smallint(5) unsigned DEFAULT '0' NOT NULL,
+   cdi datetime,
+   download datetime,
+   fichero varchar(20) NOT NULL,
+   descargado smallint(6) DEFAULT '0' NOT NULL,
+   t_reg int(10) unsigned DEFAULT '0' NOT NULL,
+   sg int(11) DEFAULT '0' NOT NULL,
+   descripcion varchar(60) NOT NULL,
+   sql_1 varchar(255) NOT NULL,
+   sql_2 varchar(255) NOT NULL,
+   sql_3 varchar(255) NOT NULL,
+   KEY cod_usuario (cod_usuario),
+   KEY tipo (tipo),
+   KEY cdi (cdi),
+   KEY descargado (descargado)
+);
+
+# --------------
+# MANTENIMIENTO
+# --------------
+
+CREATE TABLE gs_desarrollo (
+   codigo int(10) unsigned NOT NULL auto_increment,
+   cod_tipo char(1) NOT NULL,
+   cod_prioridad int(10) unsigned DEFAULT '0' NOT NULL,
+   fe_tope date DEFAULT '0000-00-00' NOT NULL,
+   resumen varchar(50) NOT NULL,
+   descripcion varchar(255) NOT NULL,
+   respuesta varchar(255) NOT NULL,
+   cdi_solicitud timestamp(14),
+   cdi_terminado timestamp(14),
+   usu_solicitud int(10) unsigned DEFAULT '0' NOT NULL,
+   usu_terminado int(10) unsigned DEFAULT '0' NOT NULL,
+   cod_estado char(1) NOT NULL,
+   PRIMARY KEY (codigo),
+   UNIQUE codigo (codigo),
+   KEY codigo_2 (codigo, cod_prioridad, cdi_solicitud)
+);
+
+
+CREATE TABLE gs_novedad (
+   codigo int(11) NOT NULL auto_increment,
+   cod_tnovedades int(11) DEFAULT '0' NOT NULL,
+   titulo varchar(45) NOT NULL,
+   fe_alta date DEFAULT '0000-00-00' NOT NULL,
+   cod_usuario int(11) DEFAULT '0' NOT NULL,
+   resumen varchar(255) NOT NULL,
+   cdi datetime,
+   PRIMARY KEY (codigo),
+   KEY cdi (cdi)
+);
+
+
+# -----------------
+# LUGAR Y USUARIOS
+# -----------------
+
+CREATE TABLE gs_pc (
+   cod_gs_pc int(2) unsigned NOT NULL auto_increment,
+   nom_gs_pc char(36) NOT NULL,
+   cod_nodo int(3) DEFAULT '0' NOT NULL,
+   cod_usuario int(2) DEFAULT '0' NOT NULL,
+   permiso char(1) NOT NULL,
+   fe_alta date DEFAULT '0000-00-00' NOT NULL,
+   fe_baja date DEFAULT '0000-00-00' NOT NULL,
+   alta_usu int(2) DEFAULT '0' NOT NULL,
+   nota char(20),
+   activar_web char(1),
+   num_serie char(16),
+   PRIMARY KEY (cod_gs_pc),
+   KEY nom_gs_pc (nom_gs_pc),
+   KEY gs_pc2 (cod_usuario),
+   KEY gs_pc3 (alta_usu)
+);
+
+CREATE TABLE nodo (
+   cod_nodo smallint(5) unsigned NOT NULL auto_increment,
+   nom_nodo varchar(60) NOT NULL,
+   activo char(1) NOT NULL,
+   domicilio varchar(36) NOT NULL,
+   cod_post varchar(5) NOT NULL,
+   nom_loca varchar(30) NOT NULL,
+   tlf varchar(9) NOT NULL,
+   tlf2 varchar(9) NOT NULL,
+   fax varchar(9) NOT NULL,
+   fe_alta date DEFAULT '0000-00-00' NOT NULL,
+   fe_baja date DEFAULT '0000-00-00' NOT NULL,
+   email varchar(65) NOT NULL,
+   ip varchar(15) NOT NULL,
+   ip2 varchar(15) NOT NULL,
+   ip_ini varchar(15) NOT NULL,
+   ip_fin varchar(15) NOT NULL,
+   notas varchar(255) NOT NULL,
+   PRIMARY KEY (cod_nodo),
+   UNIQUE cod_nodo (cod_nodo),
+   KEY cod_nodo_2 (cod_nodo)
+);
+
+CREATE TABLE usuario (
+   login varchar(32) NOT NULL,
+   clave varchar(32) NOT NULL,
+   cod_gs_tree smallint(5) unsigned DEFAULT '0' NOT NULL,
+   new_clave tinyint(2) DEFAULT '0' NOT NULL,
+   pc_con_id char(1) NOT NULL,
+   pc_total tinyint(1) DEFAULT '0' NOT NULL,
+   nombre varchar(20) NOT NULL,
+   apellidos varchar(30) NOT NULL,
+   dni varchar(8) NOT NULL,
+   telefono varchar(11) NOT NULL,
+   telefono2 varchar(11) NOT NULL,
+   fe_alta date,
+   fe_baja date DEFAULT '0000-00-00' NOT NULL,
+   email varchar(65) NOT NULL,
+   permiso char(1) NOT NULL,
+   cod_usuario smallint(5) unsigned NOT NULL auto_increment,
+   cod_nodo smallint(15) DEFAULT '0' NOT NULL,
+   notas varchar(255) NOT NULL,
+   ip varchar(15) NOT NULL,
+   ip2 varchar(15) NOT NULL,
+   ip_ini varchar(15) NOT NULL,
+   ip_fin varchar(15) NOT NULL,
+   gs_nivel char(1) NOT NULL,
+   cod_cargo char(3) NOT NULL,
+   cdi_novedad datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+   px_ficha tinyint(4) DEFAULT '0' NOT NULL,
+   px_listado tinyint(4) DEFAULT '0' NOT NULL,
+   numero tinyint(4) DEFAULT '0' NOT NULL,
+   PRIMARY KEY (cod_usuario),
+   UNIQUE usuario1 (login)
+);
+
+#-----------
+# RESERVADO
+#-----------
+
+# CREATE TABLE gs_informe ( );
+
+CREATE TABLE gs_df (
+   nombre varchar(25) NOT NULL,
+   codigo blob NOT NULL,
+   PRIMARY KEY (nombre)
+);
+
+CREATE TABLE gs_store (
+   cod_gs_store int(4) NOT NULL auto_increment,
+   nom_gs_store char(80) NOT NULL,
+   fichero char(40) NOT NULL,
+   PRIMARY KEY (cod_gs_store),
+   KEY nom_gs_store (nom_gs_store)
+);
+
+CREATE TABLE gs_ayuda (
+   codigo int(11) NOT NULL auto_increment,
+   nombre varchar(15) NOT NULL,
+   sintaxis varchar(60) NOT NULL,
+   grupo char(2) NOT NULL,
+   fe_creado date DEFAULT '0000-00-00' NOT NULL,
+   fe_modificado date DEFAULT '0000-00-00' NOT NULL,
+   resumen varchar(60) NOT NULL,
+   descripcion text NOT NULL,
+   PRIMARY KEY (codigo),
+   UNIQUE nombre (nombre)
+);
+
+CREATE TABLE nota (
+   asunto varchar(50) NOT NULL,
+   nota text NOT NULL,
+   origen int(10) unsigned DEFAULT '0' NOT NULL,
+   destino int(10) unsigned DEFAULT '0' NOT NULL,
+   leido char(1) NOT NULL,
+   cod_nota mediumint(8) unsigned DEFAULT '0' NOT NULL,
+   cdi timestamp(14)
+);

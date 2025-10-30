@@ -1,0 +1,451 @@
+- date:					¿debería ponerse en que máquinas se ha actualizado?
+	- Descripción: 
+	- Cámbios....:
+	
+	
+[Versión: 2021-01-13]
+	- group.var > ojo quien no lo tenga
+		Call3CX = 							// llamar por teléfono via 3CX: */L/T/S
+		Call3CXPrefix = 					// prefijo a añadir a los nº de teléfono
+		Call3CXFeatures = width=320,height=400,resizable,scrollbars,status=0,menubar=0,toolbar=0,location=0,titlebar=0
+	- Recalcular CSS
+	
+	
+
+[Versión: 2021-01-17]
+	- descargar motor
+	- /_datos/config/group.var
+			Call3CXUrl =						// solo si no se detecta automaticamente
+
+	- /http/edes.php
+	- /http/login.php
+	- /http/index.php
+	- /_datos/config:
+		- fonts.css
+	
+	- Recalcular CSS
+	
+[Versión: 2021-01-19]
+	- descargar motor
+	- group.var (linea 4)
+		Setup:
+			Company = IZQUIERDA UNIDA			//  Nombre de la empresa
+
+	- /_datos/config:
+		- mail.inc
+		
+	- /_d_/cfg/edes.ini -> añadir
+		$_TaskManager = array(
+			"Confluence Accesos"  =>"https://gesoft.atlassian.net/wiki/home",								// url de los accesos
+			"Jira Tareas"  =>"https://gesoft.atlassian.net/jira/software/projects/IU/boards/8"
+		);
+		if( $_Development ){
+			$_TaskManager["Plesk"] = "https://91.215.65.180:8443/login_up.php?success_redirect_url=%2F";
+		}
+
+	- Copiar //fonts/number*
+
+	- //lib/phpmailer6
+
+	- SQL
+		alter table          gs_op modify icon varchar(255);
+		alter table db_share.gs_op modify icon varchar(255);
+
+	- PHP
+		eTrace(time());
+
+		if( file_exists("../_datos/config/pass_new.htm") ){
+			rename("../_datos/config/pass_new.htm", "../_datos/config/user_new.html");
+		}
+		if( file_exists("../_datos/config/pass_new_es.htm") ){
+			rename("../_datos/config/pass_new_es.htm", "../_datos/config/user_new_es.html");
+		}
+		if( file_exists("../_datos/config/pass_reset.htm") ){
+			rename("../_datos/config/pass_reset.htm", "../_datos/config/pass_reset.html");
+		}
+		if( file_exists("../_datos/config/pass_reset_es.htm") ){
+			rename("../_datos/config/pass_reset_es.htm", "../_datos/config/pass_reset_es.html");
+		}
+		if( file_exists("../_datos/config/remember_pass.html") ){
+			rename("../_datos/config/remember_pass.html", "../_datos/config/pass_remember.html");
+		}
+		if( file_exists("../_datos/config/remember_pass_es.html") ){
+			rename("../_datos/config/remember_pass_es.html", "../_datos/config/pass_remember_es.html");
+		}
+
+		if( !file_exists("../_datos/config/cookies_short_es.html") && file_exists("../_datos/config/cookies_short.html") ){
+			rename("../_datos/config/cookies_short.html", "../_datos/config/cookies_short_es.html");
+		}
+		if( !file_exists("../_datos/config/cookies_long_es.html") && file_exists("../_datos/config/cookies_long.html") ){
+			rename("../_datos/config/cookies_long.html", "../_datos/config/cookies_long_es.html");
+		}
+		if( !file_exists("../_datos/config/user_new_es.html") && file_exists("../_datos/config/user_new.html") ){
+			rename("../_datos/config/user_new.html", "../_datos/config/user_new_es.html");
+		}
+		if( !file_exists("../_datos/config/pass_reset_es.html") && file_exists("../_datos/config/pass_reset.html") ){
+			rename("../_datos/config/pass_reset.html", "../_datos/config/pass_reset_es.html");
+		}
+		if( !file_exists("../_datos/config/pass_remember_es.html") && file_exists("../_datos/config/pass_remember.html") ){
+			rename("../_datos/config/pass_remember.html", "../_datos/config/pass_remember_es.html");
+		}
+
+		if( file_exists("../_datos/config/cookies_short_es.html") ) eTrace("../_datos/config/cookies_short_es.html");
+		if( file_exists("../_datos/config/cookies_long_es.html" ) ) eTrace("../_datos/config/cookies_long_es.html");
+		if( file_exists("../_datos/config/user_new_es.html"     ) ) eTrace("../_datos/config/user_new_es.html");
+		if( file_exists("../_datos/config/pass_reset_es.html"   ) ) eTrace("../_datos/config/pass_reset_es.html");
+		if( file_exists("../_datos/config/pass_remember_es.html") ) eTrace("../_datos/config/pass_remember_es.html");
+
+		eTrace(time());
+
+	- alter table gs_log_doc modify nm_file varchar(120);
+
+				create table gs_log_doc (
+					cd_gs_log_doc int(10) unsigned NOT NULL auto_increment,
+					dbtable varchar(30) NOT NULL,
+					nm_field varchar(30) NOT NULL,
+					pk int(6) unsigned NOT NULL,
+					nm_file varchar(120) NOT NULL,
+					type_doc varchar(4) NOT NULL,
+					doc_size int(6) unsigned NOT NULL,
+					cdi_insert datetime NOT NULL,
+					cd_gs_user int(6) unsigned NOT NULL,
+					cdi_log datetime NOT NULL,
+					user_log int(6) unsigned NOT NULL,
+					PRIMARY KEY (cd_gs_log_doc),
+					KEY gs_log_doc (pk, cdi_insert)
+				) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+	- Añadir en group.var
+		LogHistory: (134)
+			LogPathFileVersion = \\log_doc	// directorio del log de versiones de documentos
+
+	- Recalcular CSS
+	
+	- borrar los ficheros modificados (actualizacion)
+	
+	[-] SETVALUE > setAttribute()
+	[-] window.external.eLng(...) > top._Lng[...]
+	[-] window.external
+	[-] window.clipboardData
+[Versión: 2021-02-11] (hasta esta versión)
+	
+	
+	- /_datos/config:
+		- revisar "core.css"
+			- $H6:70%		no hay					falta //
+			- $H7:60%		solo en I				falta //
+
+
+[ $FUENTES-NO
+	@font-face {
+	  font-family: 'Roboto_regular';															/* Roboto_regular */
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url('fonts/roboto-v15-latin-regular.eot');										/* IE9 Compat Modes */
+	  src: local('Roboto'), local('Roboto-Regular'),
+		   url('fonts/roboto-v15-latin-regular.eot?#iefix') format('embedded-opentype'),		/* IE6-IE8 */
+		   url('fonts/roboto-v15-latin-regular.woff') format('woff'),						/* Modern Browsers */
+		   url('fonts/roboto-v15-latin-regular.ttf') format('truetype'),						/* Safari, Android, iOS */
+		   url('fonts/roboto-v15-latin-regular.svg#Roboto') format('svg'),					/* Legacy iOS */
+		   url('fonts/roboto-v15-latin-regular.woff2') format('woff2');						/* Super Modern Browsers */
+	}
+
+	@font-face {
+	  font-family: 'Roboto_700';																/* Roboto_700 */
+	  font-style: normal;
+	  font-weight: 700;
+	  src: url('fonts/roboto-v15-latin-700.eot');											/* IE9 Compat Modes */
+	  src: local('Roboto Bold'), local('Roboto-Bold'),
+		   url('fonts/roboto-v15-latin-700.eot?#iefix') format('embedded-opentype'),			/* IE6-IE8 */
+		   url('fonts/roboto-v15-latin-700.woff') format('woff'),							/* Modern Browsers */
+		   url('fonts/roboto-v15-latin-700.ttf') format('truetype'),							/* Safari, Android, iOS */
+		   url('fonts/roboto-v15-latin-700.svg#Roboto') format('svg'),						/* Legacy iOS */
+		   url('fonts/roboto-v15-latin-700.woff2') format('woff2');							/* Super Modern Browsers */
+	}
+]
+
+[ $FUENTES
+	/* libre-franklin-regular - latin */
+	@font-face {
+	  font-family: 'Libre Franklin';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url('fonts/libre-franklin-v4-latin-regular.eot');										/* IE9 Compat Modes */
+	  src: local('Libre Franklin'), local('LibreFranklin-Regular'),
+		   url('fonts/libre-franklin-v4-latin-regular.eot?#iefix') format('embedded-opentype'),	/* IE6-IE8 */
+		   url('fonts/libre-franklin-v4-latin-regular.woff2') format('woff2'),					/* Super Modern Browsers */
+		   url('fonts/libre-franklin-v4-latin-regular.woff') format('woff'),						/* Modern Browsers */
+		   url('fonts/libre-franklin-v4-latin-regular.ttf') format('truetype'),					/* Safari, Android, iOS */
+		   url('fonts/libre-franklin-v4-latin-regular.svg#LibreFranklin') format('svg');			/* Legacy iOS */
+	}
+	/* libre-franklin-700 - latin */
+	@font-face {
+	  font-family: 'Libre Franklin';
+	  font-style: normal;
+	  font-weight: 700;
+	  src: url('fonts/libre-franklin-v4-latin-700.eot');											/* IE9 Compat Modes */
+	  src: local('Libre Franklin Bold'), local('LibreFranklin-Bold'),
+		   url('fonts/libre-franklin-v4-latin-700.eot?#iefix') format('embedded-opentype'),		/* IE6-IE8 */
+		   url('fonts/libre-franklin-v4-latin-700.woff2') format('woff2'),						/* Super Modern Browsers */
+		   url('fonts/libre-franklin-v4-latin-700.woff') format('woff'),							/* Modern Browsers */
+		   url('fonts/libre-franklin-v4-latin-700.ttf') format('truetype'),						/* Safari, Android, iOS */
+		   url('fonts/libre-franklin-v4-latin-700.svg#LibreFranklin') format('svg');				/* Legacy iOS */
+	}
+]			
+			
+			
+	- create table gs_storage(
+		type_storage char(1),
+		key_storage varchar(30),
+		cdi timestamp,
+		note varchar(100),
+		text_es varchar(9000),
+		text_en varchar(2000),
+		text_ca varchar(2000),
+		text_fr varchar(2000),
+		UNIQUE gs_storage_1 (type_storage,key_storage),
+		KEY gs_storage_2 (cdi)
+	) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+	- Importar: gs_storage.unl
+			
+	- Recalcular CSS
+	- App
+	- Entrar y volver a recalcular CSS
+[Versión: 2021-02-17] (hasta esta versión)
+	
+	
+	- sustituir; 
+		- desktop.ini ???
+		- $_EMailSystem = eFileGetVar("Setup.EMailSystem");
+		- $_ClaveReset = eFileGetVar("Login.ClaveReset");
+		- $_LoginType = eFileGetVar("Login.key_case");
+
+
+	- core.css -> añadir en linea 249 -> sus colores
+		$pItemBoxRead: #E1E1E1
+		$cItemBoxRead: #4C4B4B
+		$bItemBoxRead: #C3C3C3
+	- /http/css/manager_op.css
+	- /http/css/list_print.css
+	- recalc CSS
+
+	- desktop_user, modificar
+		<input type="search" oninput="_OptionSeek(this)" id="search" placeholder="<?=$__Lng[119]?>" onkeydown="_OptionSeek(this)" onfocusout="_OptionSeek(this)" onclick="this.select()">
+
+[Versión: 2021-02-24] (hasta esta versión)
+
+	- group.var: Añadir
+		Login:
+			Type = email...							//+ 0:dni, 1:email, 2:login (variable old "LoginType")
+	- cambiar {EMAIL} por {LOGIN} en: "Configurar textos" en todos sus idiomas
+		- Password New User:	pass_remember@LNG@.html') 
+		- Password Remember
+	
+	- gs_storage.unl
+	- recal CSS
+	- motor
+	- recal CSS
+[]		
+	- importar: gs_storage - añadir - S.lng(270) >> "Si" 
+	
+[Versión: 2021-03-03] (hasta esta versión)--------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	
+	
+	
+[Versión: 2021-03-07] (hasta esta versión)
+	¿ HAY ALGUNA APLICACIÓN QUE SE EJECUTA DESDE FUERA DEL MOTOR ?
+	= SQL
+		- crear la tabla si no existe
+			CREATE TABLE gs_log_tmp (
+				pk_user int(11) NOT NULL,
+				cdi varchar(19) NOT NULL,
+				operacion char(1) NOT NULL,
+				cd_gs_user int(11) NOT NULL,
+				tabla varchar(15) NOT NULL,
+				campo varchar(30) NOT NULL,
+				valor varchar(1024),
+				borrar char(1),
+				KEY (pk_user)
+			) ENGINE=InnoDB DEFAULT CHARSET=latin1;	
+
+		- si es multitenan tiene que esta creado en los dos entornos
+			create table mibms_share.gs_conexion (
+				conexion int(10) unsigned NOT NULL auto_increment,
+				id varchar(40) NOT NULL, 
+				exe char(1),
+				cd_gs_tree smallint(3) unsigned DEFAULT '0' NOT NULL,
+				cd_gs_user smallint(6) DEFAULT '0' NOT NULL,
+				cdi datetime,
+				cd_gs_navegador int(5) DEFAULT '0' NOT NULL,
+				ip varchar(15) NOT NULL,
+				cd_gs_node smallint(6) DEFAULT '0' NOT NULL,
+				sg_carga smallint(6) DEFAULT '0' NOT NULL,
+				cdi_fin datetime,
+				zip char(1) NOT NULL,
+				cd_gs_pc smallint(6),
+				cd_server tinyint(3) unsigned,
+				key_time varchar(256),
+				access smallint(5) unsigned,
+				PRIMARY KEY (conexion),
+				KEY conexion_1 (cdi, cd_gs_user),
+				KEY id (id)
+			);
+
+	= COPIAR
+		- /edesweb/
+			- $ie.gs
+
+		- /_datos/config
+			- empty_html.htm
+			- empty_frame.htm
+			- empty_page.htm
+		- /http/g
+			- label_sel.png
+		- /http/lib/cm/addon/dialog/
+			- dialog.css
+			- dialog.js
+		- /http/fonts
+			- enumbers.eot
+			- enumbers.fcp
+			- enumbers.otf
+			- enumbers.svg
+			- enumbers.ttf
+			- enumbers.woff
+		- /http/lib/tinymce/js/tinymce/langs - 8 ficheros - copiar los ficheros de idiomas de tinymce
+			- ??.js
+	
+	= IMPORTAR
+		- share.gs_color
+		- gs_storage.unl	
+
+		
+	= EJECUTAR JS: desde el debug del explorador
+		localStorage.removeItem('e-ccss/fonts.css');
+		localStorage.removeItem('e-ccss/fonts_tlf.css');
+		localStorage.removeItem('e-ccss/fonts_small.css');
+		localStorage.removeItem('e-ccss/fonts_big.css');
+	
+	= EDITAR FICHERO
+		- politica de cookies long
+			{COOKIES-EMAIL}
+
+		- desktop_user_web.ini
+			<i class="ICONDESKTOP" id="iconoMenu" onclick="treeIcons()" oncontextmenu="HeaderHeight()" title="<?=$__Lng[120]?>" eTitleOn="<?=$__Lng[120]?>" eTitleOff="<?=$__Lng[121]?>" style="font-size:14px">&#397;</i>
+			<input _type="search" id="search" placeholder="<?=$__Lng[119]?>" onkeydown="_OptionSeek(this)" onfocusout="_OptionSeek(this)" onclick="this.select()">
+
+		- sql.ini:
+			- borrar variable "$_JSEncode"
+
+		- en "group.var" (y quitarlo de sql.ini)
+			EMailCookies = cookies@gesoft.es	//  EMail para la politica de cookies
+
+			UploadFile: 
+				MaxSize = limit			// Si el tamaño de la definición [UploadFile] excede el del sistema tomará este
+				BoxSize= 10												// espacio de trabajo limitado a 10 Gigas	- $_CNTDISKSPACE = 10;			// Gigas - $_CNTFREEDISKSPACE = false;
+				BoxDir = =i_clientescloud.datos/{$_SESS['_RCli_']}	// directorio a controlar el tamaño			- $_CNTDIR = '=i_clientescloud.datos/'.$_SESS['_RCli_'];
+				
+		- en group.var añadir (no)
+			Setup
+				Cache = true						// está activo el cache de páginas
+
+			Desktop:
+				ExitToLogin = true					// Al salir de la aplicación ejecutar el login
+			Setup:
+				DevelopmentBackgroundColor = #555	//  color del desktop cuando el servidor es de desarrollo
+						
+		- edes.ini
+			$_nBackup = 30;			// 0:NoBak, 1:Una copia, 7:Una por dia de la semana; 30:Una por dia del mes, -1:Un fichero con todas sus versiones
+			$_nDaily = 30;			// Nº de dias de copias incrementales
+			$_RecentFiles = 30;
+
+		- core.css:
+			- linea:33
+				$fIconTabSmall: 8px;
+				$fIconTab:     13px;			// 1{%5}px - tamaño iconos {%15}px - old 10
+				$fIconTabBIG:  12px;			// 1{%5}px - tamaño iconos {%15}px
+				$fIconWin:     13px;			// tamaño iconos subventanas
+			- linea:109
+				//----------
+				//[Tree]
+				//----------
+			- linea 249:
+				$pItemBoxRead: #FEF9E7
+				$cItemBoxRead: #C39BD3
+				$bItemBoxRead: #CD6155
+	
+	- > motor eDes
+	- COPIAR:
+		- /http/edes.php
+	- generar css
+
+	= ENTRAR en LA APLICACION
+
+	= SQL
+		- alter table gs_storage modify text_es varchar(9000);
+		- alter table gs_conexion DROP COLUMN sesion; 			(en las 2 ddbb si hay share)
+	
+	- "tinyTexto_1" -> "_tinyTexto_1"
+	- copiar lo que está en "_bak_.." a "_bak_" y luego borrarlo
+	- quitar: session_start();
+	- cambiar "$_SESS ION[" por "$_SESS"
+
+	- REVISAR:
+		- session.ini
+		- desktop_user_web.ini
+
+	= BORRAR FICHEROS
+		- /http/index.php
+		- /http/login.php
+		- /http/edes.gs
+		- /_datos/usr/*.dft
+
+	= ClaveReset = A5EB2337295BE3AD87BB08F41B1F68EE		// Clave por defecto - strtoupper(md5('CAMBIARYA'));
+	= PK Server único
+	= En I y P cambiar los texto de los email
+
+-------------
+
+	= COPIAR
+		- desktop_user_web.ini
+		
+	= MODIFICAR
+		- group.var: 
+			- Linea:29:		SearchWithLike = true				// Las búsquedas se hacen con like ($_SearchWithLike) variable para descartar campos $_SearchNotLike = "field1,field2,...";
+			- Linea:114: 	SubWindowInIWork = true				// si "OptionsInListMenuRow=true" define la gestión de registros en IWORK, valor por defecto false en subventana
+			- Linea:123:	cambiar "ver lo" por "verlo" en:	CardSwitch = true			// activa en los listados la posibilidad de verlo en modo tarjetas - [PHPStart] l	$_CARD_OFF = true;
+		- /_datos/config/manager_op.ini - $_Mode por $_ModeOp
+
+	= BORRAR: /_datos/usr/*.dft
+		
+	= NUEVO MOTOR
+	= REGENERAR CSS
+
+:::FUTURO:::
+	- Sustituir: R:$edes.js -> top.S.init(window); >>> ojo ePF(), ePPF(), no estarían....
+	
+- 2022-03-06
+	- alter table gs_user
+		add verify_pass char(1),
+		add verify_cookie varchar(32),
+		add verify_expire datetime,
+		add verify_wait char(1);
+		
+	- añadir en group.var en "Login"
+		VerificationType = sms,email		// sms,email (se ejecuta el primero que tenga exito)
+		VerificationSMS = http://conector.moviljet.com/conector/conector_ccoo.php?a=33&b=agarcia@gesoft.es&c=hideous1&d=34#phone#&e=#message#
+		VerificationExpire = 365			// si se autentifica el dispositivo tiempo en renovar la verificación 
+		VerificationKey = e1a31f39d48		// clave para encriptar la petición en el modo emal (11#)
+		VerificationWait = 5				// minutos esperando entrar mediante verificación EMail 
+		AuthenticationRequired = yes
+		LoginTextarea = false				// el login lo pide un INPUT o un TEXTAREA
+
+	- anadir en "group.var"
+		Desktop:
+			MenuDefaultType = N					// menu por defecto: [N]ormal / [I]conizado
+			DesktopBannerMinimized = true		// si el banner del desktop se muestra minimizado
+
+	- añadir en "desktop_user_web.ini"
+		<i class="favorite OFF" onclick="Favorite.view(this)" style="font-size:80%; margin-left:5px; cursor:pointer;" title="Opciones favoritas">Z</i>

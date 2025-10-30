@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nueva Clave Temporal</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+}
+.email-container {
+max-width: 600px;
+margin: 20px auto;
+background-color: #ffffff;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.header {
+background-color: #007bff;
+padding: 20px;
+text-align: center;
+}
+.logo {
+max-width: 150px;
+height: auto;
+}
+.company-name {
+color: #ffffff;
+font-size: 24px;
+font-weight: bold;
+margin-top: 10px;
+}
+.content {
+padding: 30px;
+}
+.welcome-text {
+font-size: 18px;
+color: #333;
+margin-bottom: 20px;
+}
+.password-box {
+background-color: #f8f9fa;
+border: 2px dashed #007bff;
+border-radius: 5px;
+padding: 15px;
+margin: 20px 0;
+text-align: center;
+}
+.temp-password {
+font-size: 20px;
+font-weight: bold;
+color: #007bff;
+font-family: 'Courier New', monospace;
+letter-spacing: 2px;
+}
+.generate-button {
+display: block;
+width: 250px;
+margin: 30px auto;
+padding: 12px 20px;
+background-color: #28a745;
+border: none;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+text-align: center;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+.generate-button:hover {
+background-color: #218838;
+}
+.footer {
+background-color: #343a40;
+color: #ffffff;
+padding: 20px;
+text-align: center;
+font-size: 12px;
+}
+.security-note {
+background-color: #fff3cd;
+border: 1px solid #ffeaa7;
+border-radius: 5px;
+padding: 10px;
+margin: 20px 0;
+font-size: 12px;
+color: #856404;
+}
+.copy-button {
+background-color: #6c757d;
+color: white;
+border: none;
+padding: 5px 10px;
+border-radius: 4px;
+cursor: pointer;
+margin-left: 10px;
+font-size: 12px;
+}
+.copy-button:hover {
+background-color: #5a6268;
+}
+.password-actions {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 10px;
+}
+.instructions {
+background-color: #e9ecef;
+padding: 15px;
+border-radius: 5px;
+margin: 20px 0;
+}
+</style>
+</head>
+<body>
+<div class="email-container">
+<div class="header">
+<div class="company-name">Sistema de Claves Temporales</div>
+</div>
+<div class="content">
+<h1 class="welcome-text">Clave Temporal Generada</h1>
+<p>Hola <strong>{USER_NAME}</strong>,</p>
+<p>Se ha generado una nueva clave temporal para tu cuenta. Utiliza esta clave para acceder al sistema.</p>
+<div class="password-box">
+<p>Tu clave temporal es:</p>
+<div class="temp-password" id="tempPassword">{PASSWORD}</div>
+<div class="password-actions">
+<button class="copy-button" id="copyButton">Copiar clave</button>
+</div>
+</div>
+<div class="instructions">
+<h3>Instrucciones:</h3>
+<ol>
+<li>Utiliza esta clave para iniciar sesi?n en el sistema</li>
+<li>Despu?s del primer acceso, se te pedir? que cambies tu clave</li>
+<li>Esta clave expirar? en 24 horas</li>
+</ol>
+</div>
+</div>
+>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const copyButton = document.getElementById('copyButton');
+const tempPassword = document.getElementById('tempPassword');
+const sendEmailButton = document.getElementById('sendEmailButton');
+copyButton.addEventListener('click', function() {
+navigator.clipboard.writeText(tempPassword.textContent)
+.then(() => {
+copyButton.textContent = '?Copiada!';
+setTimeout(() => {
+copyButton.textContent = 'Copiar clave';
+}, 2000);
+})
+.catch(err => {
+console.error('Error al copiar: ', err);
+alert('No se pudo copiar la clave. Por favor, selecci?nala manualmente.');
+});
+});
+sendEmailButton.addEventListener('click', function() {
+sendEmailButton.textContent = 'Enviando...';
+sendEmailButton.disabled = true;
+setTimeout(() => {
+alert('Clave reenviada por correo electr?nico');
+sendEmailButton.textContent = 'Reenviar clave por correo';
+sendEmailButton.disabled = false;
+}, 1500);
+});
+});
+</script>
+</body>
+</html>

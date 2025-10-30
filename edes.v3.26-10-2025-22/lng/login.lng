@@ -1,0 +1,38 @@
+[Language] es,ca,en,fr,cs
+1|Acción no permitida|Acció no permesa|Action not allowed|Action non autorisée|Akce není povolena
+2|Falta introducir el usuario|Falta introduir l´USUARI|User not introduced|Veuillez saisir l'utilisateur|Chybí zadání uživatele
+3|La longitud del usuario es incorrecta|La longitud de l´USUARI ÉS INCORRECTA|The length for the user is wrong|La longueur de l'utilisateur est incorrecte|Délka uživatelského jména je nesprávná
+4|La longitud mínima del usuario es de "#" caracteres|La longitud mínima de l´USUARI és de "#" caràcters|The minimum length for the user is of "#" characters|La longueur minimale de l'utilisateur est de "#" caractères|Minimální délka uživatelského jména je "#" znaků
+5|Falta introducir la contraseña|Falta introduir la CLAU|Password missing|Veuillez saisir le mot de passe|Chybí zadání hesla
+6|La longitud mínima de la contraseña es de "#" caracteres|La longitud mínima de la CLAU és de "#" caràcters|The minimum length for the password is of "#" characters|La longueur minimale du mot de passe est de "#" caractères|Minimální délka hesla je "#" znaků
+7|Login grabado para Install|Login gravat per Install|Login recorded to Install|Login enregistré pour l'installation|Přihlášení uloženo pro Instalaci
+8|Graba MainMenu para "Install"|Grava MainMenu per "Install"|Record MainMenu to "Install"|Enregistrer MainMenu pour "Install"|Uložit MainMenu pro "Install"
+9|Graba Desktop para "Install"|Grava Desktop per "Install"|Record Desktop to "Install"|Enregistrer Bureau pour "Install"|Uložit Plochu pro "Install"
+10|Intranet parada. solo personal autorizado|Intranet PARADA. Sol personal autoritzat|Intranet stopped. only staff is allowed|Intranet HORS SERVICE. Personnel autorisé uniquement|Intranet ZASTAVEN. Pouze autorizovaný personál
+11|Aceptar|Aceptar|Accept|Accepter|Přijmout
+12|Cancelar|Cancel·lar|Cancel|Annuler|Zrušit
+13|Bloque mayúsculas activo|Bloc majúscules actiu|Caps Lock on|Verr Maj activé|Caps Lock aktivní
+14|Recordar contraseña|Recordar contrasenya|Remember password|Se souvenir du mot de passe|Pamatovat si heslo
+15|Cerrar|Tancar|Close|Fermer|Zavřít
+16|Falta introducir la empresa|Falta introduir l´EMPRESA|Company not introduced|Veuillez saisir l'entreprise|Chybí zadání společnosti
+17|Tiempo en expirar el login|Temps en expirar el login|Login expiration time|Temps d'expiration de la connexion|Čas pro vypršení přihlášení
+
+titulo|Iniciar sesión|Iniciar sessió|Log in|Connexion|Přihlásit se
+subtitulo|Introduzca su usuario y contraseña|Introduïu el vostre usuari i contrasenya|Enter your username and password|Saisissez votre nom d'utilisateur et votre mot de passe|Zadejte své uživatelské jméno a heslo
+login|Usuario|Usuari|Username|Nom d'utilisateur|Uživatelské jméno
+password|Contraseña|Contrasenya|Password|Mot de passe|Heslo
+submit|Iniciar sesión|Iniciar sessió|Log in|Connexion|Přihlásit se
+
+noAccede|¿No puede acceder?|No hi pot accedir?|Can't log in?|Impossible de se connecter ?|Nemůžete se přihlásit?
+pulsarAqui|Pulse aquí|Feu clic aquí|Click here|Cliquez ici|Klikněte zde
+
+Política de cookies|Política de cookies|Política de cookies|Cookie Policy|Politique relative aux cookies|Zásady používání souborů cookie
+loEntiendo|Lo entiendo|Ho entenc|I understand|Je comprends|Rozumím
+
+tiempoEnCaducarLaSesion|Tiempo en caducar la sesión|Temps a caducar la sessió|Session expiration time|Délai d'expiration de la session|Doba vypršení platnosti relace
+seleccionarIdioma|Seleccionar idioma|Seleccionar idioma|Select language|Sélectionner la langue|Vyberte jazyk
+
+verPassword|Ver clave|View password|View password|Afficher le mot de passe|Zobrazit heslo
+getPutPassword|Obtener/Grabar password|Obtenir/Gravar password|Get/Put password|Obtenir/Enregistrer le mot de passe|Získat/Zaznamenat heslo
+
+verGetPutPassword|Ver clave\nObtener/Grabar password|View password\nObtenir/Gravar password|View password\n|Get/Put password|Afficher le mot de passe\nObtenir/Enregistrer le mot de passe|Zobrazit heslo\nZískat/Zaznamenat heslo

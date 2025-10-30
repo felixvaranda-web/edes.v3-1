@@ -1,0 +1,3 @@
+¿ SS::isDriver('mysql,mysqli') ? [Jump] $a/d/no_option.inc
+¿ SS::isDriver("oci") ? [Jump] $a/d/no_option.inc
+¿ SS::isDriver("informix") ? [Jump] $a/d/informix_trigger.edf

@@ -1,0 +1,68 @@
+[Title]CAMPO/S
+[DBTable]{$_ENV['SYSDB']}gs_campo
+[DBIndex]cd_gs_campo ; cd_gs_entidad,tabla,campo,relacion,tipo
+[DBOrder]B.nm_gs_entidad,C.nm_gs_grupo,orden,etiqueta
+[DBSerial]cd_gs_campo
+[DBLimit]500
+[FormAction]m|edes.php?Ll:
+[RelationFields]cd_gs_entidad,cd_gs_grupo
+[AddOption]*|alineacion|I,Izquierda; C,Centro; D,Derecha; L,MultiLinea
+[AddOption]*|nivel|,; 1,Básico; 2,Medio; 3,Total; 9,INFORMATICA
+[EditList]cd_gs_grupo,alineacion,etiqueta,nivel,label_tab
+[SortList]l|orden|cd_gs_entidad,cd_gs_grupo
+[Fields]?
+Entidad|cd_gs_entidad|0|S|30||MQd|||
+Grupo de datos|cd_gs_grupo|D|Ss|30||MQ|||
+Texto en Listados|etiqueta|#|T|30||MQ|||
+Texto en Fichas|label_tab|#|T|30||MQ|||
+Nivel de·extracción|nivel|+|SV|12||MQ|||
+[Fields]l
+Orden|orden|+|T|3||M|||
+|cd_gs_campo|*|T|2||*|||
+Tabla|tabla|x|SV|30||-||#|
+Campo|campo|x|T|40||-||#|
+Ancho|ancho|+|T|3||-||#|
+Decimales\Dec.|decimales|+|T|1||-|||
+Entidad|cd_gs_entidad|0|S|30||-||#|
+Grupo de datos|cd_gs_grupo|D|Ss|30||M||#|
+Texto en·Listados|etiqueta|#|T|30||M||#|
+Texto en·Fichas|label_tab|#|T|30||M|||
+Alineación\ALIN.|alineacion|D|SV|9||M|I||
+Nivel de·extracción|nivel|+|SV|12||M|||
+[JSCheck]m
+if( eGF('cd_gs_entidad')=='' ) ePE('cd_gs_entidad','Falta definir la "Entidad"');
+[AddOption]a,?R,?|tabla|uTablas()
+[PHPIni]a,?R,?
+function uTablas(){
+global $_Sql, $_SqlPDOType;
+if( SS::isDriver("informix") ){
+SS::query("select tabname,tabtype from systables where tabid>100");
+}else if( SS::isDriver("oci") ){
+global $_SqlUsuario; $SqlUsuario = mb_strtoupper($_SqlUsuario);
+$sql = "SELECT TABLE_NAME FROM all_tables where OWNER='{$SqlUsuario}'";
+SS::query( $sql );
+}else if( SS::isDriver('mysql,mysqli') ){
+SS::query( 'show tables' );
+}
+$Dim = array();
+while( $row = SS::get("num") ){
+if( SS::isDriver("informix") ){
+if( $row[1]=='S' ){
+$Dim[] = trim($row[0]);
+}else{
+$Dim[] = trim($row[0]);
+}
+}else if( SS::isDriver("oci") ){
+$Dim[] = mb_strtolower(trim($row[0]));
+}else if( SS::isDriver('mysql,mysqli') ){
+$Dim[] = trim($row[0]);
+}
+}
+sort($Dim);
+$DimTablas = array();
+if( mb_strlen($GLOBALS['_Mode'])==1 ) $DimTablas[] = array( '', '' );
+for( $n=0; $n<count($Dim); $n++ ) $DimTablas[] = array( $Dim[$n], $Dim[$n] );
+return $DimTablas;
+}
+[PHPIni]l
+if( $_SORTLIST!='' ) $_TITLE = 'Lista de "CAMPOS" a ordenar manualmente';

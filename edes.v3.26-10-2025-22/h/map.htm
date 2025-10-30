@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><TITLE> HELP </TITLE>
+<LINK REL="stylesheet" HREF="edes.php?R:$h/i/help2.css" TYPE="text/css">
+</HEAD>
+<BODY style='margin:0px' scroll=no oncontextmenu='return false;' onhelp='return false'><table id="Esquema" style="height: 180px; width: 100%;" width="100%" cellspacing="1px" cellpadding="2px">
+<tbody>
+<tr style="height: 18px;">
+<td id="Etiqueta" style="height: 18px;">eMap</td>
+</tr>
+<tr style="height: 18px;">
+<td id="tSintaxis" style="height: 18px;">SINTAXIS</td>
+</tr>
+<tr style="height: 18px;">
+<td id="Sintaxis" style="height: 18px;">[Map] fieldsList | fieldLatitud, fieldLongitud | width[, height]</td>
+</tr>
+<tr style="height: 18px;">
+<td id="tDescripcion" style="height: 18px;">DESCRIPCION</td>
+</tr>
+<tr style="height: 18px;">
+<td id="Descripcion" style="height: 18px;">Muestra un mapa a la derecha de la ficha con un punto gps</td>
+</tr>
+<tr style="height: 18px;">
+<td id="tParametro" style="height: 18px;">PARAMETROS</td>
+</tr>
+<tr style="height: 18px;">
+<td id="Parametro" style="height: 18px;">
+<div>
+<div><strong>fieldsList</strong>: Lista de campos para el calculo de la ubicación, el último campo de esta lista es donde se pondrán los iconos para ejecutar la búsqueda del punto gps.<br /><strong>fieldLatitud</strong>: Nombre del campo donde se guarda la latitud<br /><strong>fieldLongitud</strong>: Nombre del campo donde se guarda la longitud<br /><strong>width</strong>: ancho del mapa<br /><strong>height</strong>: alto del mapa, si no se indica se pondrá el alto de la ficha</div>
+</div>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td id="tEjemplo" style="height: 18px;">EJEMPLO</td>
+</tr>
+<tr style="height: 18px;">
+<td id="Ejemplo" style="height: 18px;">
+<div>
+<div><code>[Map] address, zip, nm_loca | latitud, longitud | 40%</code><br /><br /><code>[Fields]</code><br /><code>...</code><br /><code> latitud  | latitud  | -, | T | 2,6 | | -Q- | | |</code><br /><code>,longitud | longitud | -, | T | 3,6 | | -Q- | | |</code></div>
+</div>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td id="txt" style="height: 18px;"> </td>
+</tr>
+</tbody>
+</table>
+<SCRIPT LANGUAGE="JavaScript">
+Esquema.cellSpacing = 0;
+if( document.getElementById("Ejemplo")!=null ){
+if( Ejemplo.length==undefined && Ejemplo.innerHTML.length==0 ){
+tEjemplo.parentElement.style.display = 'none';
+}else{
+for(var i=0; i<Ejemplo.length; i++){
+if( Ejemplo[i].innerHTML.length==0 ) Ejemplo[i].parentElement.style.display = 'none';
+}
+}
+}
+if( document.getElementById("Parametro")!=null && Parametro.innerHTML.length==0 ) tParametro.parentElement.style.display = 'none';
+if( window.frameElement.getAttribute("eSubWin")==1 ) Etiqueta.style.display = "none";
+window.focus();
+</SCRIPT>
+</BODY></HTML>

@@ -1,0 +1,49 @@
+<?PHP 
+//[Title] @Configuración de la instalación@
+//[Help] install@LNG@.ini
+
+// @Datos generales@
+$Empresa = '';					// @Empresa@
+$TituloApli = '';				// @Título aplicación@
+$SubTituloApli = '';			// @SubTítulo aplicación@
+
+$DirWeb = '';					// @Dirección web@
+
+// @DDBB@
+$DataBase = 'mysql';			// [informix,Informix;mysql,MySql;oracle,Oracle] @Base de datos@
+$AddDefTable = '';			// @Añade definición a cada tabla@
+$HostName = '';				// @Host@
+$Diccionario = '';			// @Diccionario@
+$Usuario = '';					// @Usuario@
+$Password = '';				// @Password@
+
+// @Configura generación@
+$LoginType = 1;																	// [0,DNI; 1,EMail; 2,Login] @Tipo de Login@
+$Opciones = 'CMIB: @Consultar@,@Modificar@,@Insertar@,@Borrar@';	// @Orden y texto de las opciones@ \ &nbsp;&nbsp;&#40; L:@Listar@ )
+
+$Idioma = 'es';																	// [es,Español;en,Engles] @Idioma@
+$Desktop = 2;																		// [0,@Solapas@;1,@Vertical@;2,@Horizontal@] @Tipo desktop@
+$ColorBase = 'A';																	// [A,@Azul@] @Color base@
+
+// @Elementos a generar@
+$CreateDatabase = true;		// @Crear DataBase@
+$CreateTablas = true;		// @Crear Tablas@
+$CreateDF = true;				// @Crear ficheros de Definición@
+$CreateTree = true;			// @Crear Arbol de Opciones@
+$DeleteDir = true;			// @Borrar Directorios@
+
+// @Generación DF@
+$WrapInputext = 90;			// @Wrap en INPUTEXT@
+$DefTextArea = '2000,80,4';// @Tamaño TEXTAREA@
+
+// @Lanzador@
+$PCDirApp = '';				// @Directorio de trabajo local@
+$TitleLauncher = '';			// @Titulo del lanzador@
+$Shortcut = '';				// @Nombre del acceso directo@
+$ShortcutGroup = '';			// @Nombre del grupo de opciones@
+
+// @Usuario@
+$DefPassword = '';			//[*] @Password por defecto de la aplicación@
+$InitWeb = '';					//[*] @Password de entrada con la web parada@
+
+?>

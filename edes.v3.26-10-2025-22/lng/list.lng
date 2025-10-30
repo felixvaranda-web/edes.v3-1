@@ -1,0 +1,139 @@
+[Language] es,ca,en,fr,cs
+1|Insertar|Inserir|Insert|Insérer|Vložit
+2|Modificar|Modificar|Modify|Modifier|Upravit
+3|Consultar|Consultar|Consult|Consulter~Voir Conseil|Konzultovat~Zobrazit Poradenství
+4|Borrar|Esborrar|Delete|Supprimer|Smazat
+5|Utilidades|Utilitats|Utilities|Utilitaires|Nástroje
+6|Listado #|LLISTAT #|Listing #|Liste #|Seznam #
+7|Seleccionar # a modificar|SELECCIONAR # A MODIFICAR|Select # to modify|SÉLECTIONNER # À MODIFIER|Vybrat # k úpravě
+8|Seleccionar # a consultar|SELECCIONAR # A CONSULTAR|Select # to consult|SÉLECTIONNER # À CONSULTER|Vybrat # ke konzultaci
+9|Seleccionar # a borrar|SELECCIONAR # A ESBORRAR|Select # to delete|SÉLECTIONNER # À SUPPRIMER|Vybrat # ke smazání
+10|Seleccionar # a recuperar|SELECCIONAR # A RECUPERAR|Select # to recover|SÉLECTIONNER # À RÉCUPÉRER|Vybrat # k obnovení
+11|Contador de páginas|Comptador de pàgines|Page counter|Compteur de pages|Počítadlo stránek
+12|Contador de registros|Comptador de registres|Record counter|Compteur d'enregistrements|Počítadlo záznamů
+13|Página actual|Pàgina actual|Actual page|Page actuelle|Aktuální stránka
+14|Registro actual|Registre actual|Current record|Enregistrement actuel|Aktuální záznam
+15|Última página|Última pàgina|Last page|Dernière page|Poslední stránka
+16|Último registro|Últim registre|Last record|Dernier enregistrement|Poslední záznam
+17|Grabar ordenación|Gravar Ordenació|Record sorting|Enregistrer le tri|Uložit řazení
+18|Primeros #1 de #2 regístros|Primers #1 de #2 registres|First #1 of #2 records|Premiers #1 sur #2 enregistrements|Prvních #1 z #2 záznamů
+19|Se ha llegado al límite de la extracción #1 de #2 regístros|S´ha arribat al límit de l´extracció #1 de #2 registres|Limit reached for extraction #1 of #2 records|Limite atteinte pour l'extraction #1 sur #2 enregistrements|Dosažen limit extrakce #1 z #2 záznamů
+20|Página #1 de #2 (Total registros #3)|Pàgina #1 de #2 (Total registres #3)|Page #1 of #2 (Total records #3)|Page #1 sur #2 (Total enregistrements #3)|Stránka #1 z #2 (Celkem záznamů #3)
+21|# Registros|# Registres|# Records|# Enregistrements|# Záznamů
+22|Utilidades|Utilitats|Utilities|Utilitaires~Titre|Nástroje~Název
+23|Selección en la ventana actual|Selecció en la finestra actual|Selection in current window|Sélection dans la fenêtre actuelle|Výběr v aktuálním okně
+24|Registros por página|Registres per pàgina|Records per page|Enregistrements par page|Záznamů na stránku
+25|Primera página|Primera pàgina|First page|Première page|První stránka
+26|Página anterior|Pàgina anterior|Previous page|Page précédente|Předchozí stránka
+27|Página siguiente|Pàgina següent|Next page|Page suivante|Další stránka
+28|Última página|Última pàgina|Last page|Dernière page|Poslední stránka
+29|Cadena a buscar|Cadena a buscar|String to search|Chaîne à rechercher|Hledaný řetězec
+30|Click Izq: Anterior\nClick Dch: Anterior (dato completo)|Clic ESQ: Anterior\nClic DRET: Anterior (dada complet)|Click Left: Previous\nClick Right: Previous (complete data)|Clic Gauche: Précédent\nClic Droit: Précédent (donnée complète)|Klik Levý: Předchozí\nKlik Pravý: Předchozí (úplná data)
+31|Click Izq: Buscar\nClick Dch: Buscar (dato completo)|Clic ESQ: Buscar\nClic DRET: Buscar (dada complet)|Click Left: Search\nClick Right: Search (complete data)|Rechercher|Klik Levý: Hledat\nKlik Pravý: Hledat (úplná data)
+32|Click Izq: Siguiente\nClick Dch: Siguiente (dato completo)|Clic ESQ: Següent\nClic DRET: Següent (dada complet)|Click Left: Next\nClick Right: Next (complete data)|Suivant|Klik Levý: Další\nKlik Pravý: Další (úplná data)
+33|Filtrar datos|Filtrar dades|Filter data|Filtrer les données|Filtrovat data
+34|Click Izq: PDF en Color\nClick Dch: PDF en B/N|Click ESQ: Canviar a PDF Color\nClic DRET: Canviar a PDF B/N|Click Left: PDF in Color\nClick Right: PDF in B/W|Clic Gauche: PDF Couleur\nClic Droit: PDF N/B|Klik Levý: PDF Barevně\nKlik Pravý: PDF ČB
+35|Click Izq: Pasar a Excel\nClick Dch: Pasar a Excel la pantalla|Clic ESQ:Passar a Excel\nClic DRET: Passar a Excel la pantalla|Click Left: Go to Excel\nClick Right: Go to Excel the screen|Clic Gauche: Aller à Excel\nClic Droit: Passer l'écran à Excel|Klik Levý: Do Excelu\nKlik Pravý: Do Excelu Obrazovka
+36|Pasar a Access|Passar a Access|Go to Access|Passer à Access|Do Accessu
+37|Imprimir|Imprimir|Print|Imprimer|Tisk
+38|Listado|Llistat|List|Liste|Seznam
+39|Imprimir|Imprimir|Print|Imprimer|Tisk
+40|Ver gráfica|Veure gràfica|See graph|Voir graphique|Zobrazit graf
+41|Si|Si|Yes|Oui|Ano
+42|No|No|No|Non|Ne
+43|Condiciones|CONDICIONS|Conditions|CONDITIONS|Podmínky
+44|Ver documento|Veure document|View document|Voir document|Zobrazit dokument
+45|Editar documento|Editar document|Edit document|Éditer document|Upravit dokument
+46|Dato vacío|dada buida|Empty data|Donnée vide|Prázdná data
+47|Dato relleno|dada farcida|Fill data|Donnée remplie|Vyplněná data
+48|Dato vacío - nulo|dada buida - nul·la|Empty data - null|Donnée vide - nulle|Prázdná data - Nula
+49|Dato no nulo|dada no nul·la|Not null data|Donnée non nulle|Nenulová data
+50|y|i|and|et|a
+51|o|o|either|ou|nebo
+52|Página actual|Pàgina actual|Actual page|Page actuelle|Aktuální stránka
+53|Nº total de páginas|Nº total de pàgines|Total number of pages|Nombre total de pages|Celkový počet stránek
+54|No se puede mover la fila a la posición<br>indicada por ser de otro grupo.|No es pot moure la fila a la posició<br>indicada per ser d´un altre grup.|The row cannot be moved to the indicated position<br>because it belongs to another group.|La ligne ne peut pas être déplacée à la position indiquée<br>car elle appartient à un autre groupe.|Řádek nelze přesunout na uvedenou pozici<br>protože patří do jiné skupiny.
+55|El tamaño máximo por fichero excede la configuración: # Bytes|La grandària màxima per fitxer excedeix la configuració: # Bytes|The maximum size per file exceeds the setting: # Bytes|La taille maximale par fichier dépasse la configuration: # Bytes|Maximální velikost souboru překračuje konfiguraci: # Bytes
+56|Error:<br>Variable "#1" no definida correctamente<br>Contenido "#2"|ERROR:<br>Variable "#1" no definida correctament<br>Contingut "#2"|Error:<br>Variable "#1" not defined correctly<br>Content "#2"|ERREUR:<br>Variable "#1" non définie correctement<br>Contenu "#2"|CHYBA:<br>Proměnná "#1" není správně definována<br>Obsah "#2"
+57|Página|Pàgina|Page|Page|Stránka
+58|de|de|of|de|z
+59|Ver Fichero|Veure Fitxer|See File|Voir Fichier|Zobrazit soubor
+60|Pasar a TXT|Passar a TXT|Go to TXT|Passer à TXT|Do TXT
+61|Pasar a XML|Passar a XML|Go to XML|Passer à XML|Do XML
+62|Volver al formulario|Tornar al formulari|Back to the form|Retourner au formulaire|Zpět na formulář
+63|Pasar a PDF en Color|Canviar a PDF Color|Go to Color PDF|Passer à PDF Couleur|Do PDF Barevně
+64|Pasar a PDF en B/N|Canviar a PDF B/N|Go to PDF in B/W|Passer à PDF N/B|Do PDF ČB
+65|Pasar a Excel|Passar a Excel|Go to Excel|Passer à Excel|Do Excelu
+66|Pasar a Excel la pantalla|Passar a Excel la pantalla|Switch to Excel the screen|Passer à Excel l'écran|Excel pro obrazovku
+67|Cerrar|Tancar|Close|Fermer|Zavřít
+68|Selección en subventana|Selecció en una subventana|Selection in a subwindow|Sélection dans la sous-fenêtre|Výběr v podokně
+69|Selección en ficha deslizante|Selecció en fitxa lliscant|Slider tab selection|Sélection dans la fiche coulissante|Výběr na posuvné kartě
+70|Selección en ventana actual|Selecció en la finestra actual|Selection in current window|Sélection dans la fenêtre actuelle|Výběr v aktuálním okně
+71|Modo SubVentana|Mode SubFinestra|SubWindow Mode|Mode Sous-fenêtre|Režim Podokna
+72|Pasar a CSV|Passar a CSV|Go to CSV|Passer à CSV|Do CSV
+73|Criterio a filtrar|Criteri a filtrar|Filter criteria|Critère à filtrer|Kritérium filtru
+74|Minimizar|Minimitzar|Minimize|Minimiser|Minimalizovat
+75|Gráficos|Gràfics|Graphics|Graphiques|Grafy
+76|Gráficos del Sistema|Gràfics del Sistema|System Graphics|Graphiques du système|Systémové grafy
+77|Total registros|Total registres|Total records|Total d'enregistrements|Celkem záznamů
+78|Condición|CONDICIÓN|Condition|CONDITION|Podmínka
+79|Pasar a PDF|Canviar a PDF|Go to PDF|Passer à PDF|Do PDF
+80|Informe Resumido|Informe Resumit|Summary Report|Rapport Sommaire|Souhrnná Zpráva
+81|Click Izq: Ver imagen\nClick Dch: Descargar imagen|Clic ESQ: Veure imatge\nClic DRET: Descarregar imatge|Click Left: View image\nClick Right: Download image|Clic Gauche: Voir image\nClic Droit: Télécharger image|Klik Levý: Zobrazit obrázek\nKlik Pravý: Stáhnout obrázek
+82|Últimos registros gestionados:|Últims registres gestionats:|Last records managed:|Derniers enregistrements gérés :|Poslední Spravované Záznamy:
+83|Columnas a visualizar|Columnes a visualitzar|Columns to display|Colonnes à afficher|Sloupce k zobrazení
+84|Espaciado|Espaiat|Spacing|Espacement|Mezery
+85|Filtrar...|Filtrar...|Filter...|Filtrer...|Filtrovat...
+86|Opciones|Opcions|Options|Options|Možnosti
+87|Ver condiciones|Veure condicions|See conditions|Voir conditions|Zobrazit podmínky
+88|Tarjetas|Targetes|Cards|Cartes|Karty
+89|Últimos registros|Últims registres|Last records|Derniers enregistrements|Poslední Záznamy
+99|Paginar|Paginar|Page|Paginer|Stránkování
+100|Comparar Informes|Comparar Informes|Compare Reports|Comparer Rapports|Porovnat Zprávy
+101|Exportar con Clave|Exportar amb Clau|Export with Key|Exporter avec Clé|Exportovat s Klíčem
+102|Exportar por EMail|Exportar per EMail|Export by email|Exporter par EMail|Exportovat E-mailem
+103|Exportar|Exportar|Export|Exporter|Exportovat
+104|Recuperar registro borrado|Recuperar registre esborrat|Recover deleted record|Récupérer enregistrement supprimé|Obnovit Smazaný Záznam
+105|Ayuda|Ajuda|Help|Aide|Nápověda
+106|Lineas verticales|Línies verticals|Vertical lines|Lignes verticales|Svislé čáry
+107|Informe Expandido|Informe Expandit|Expanded Report|Rapport étendu|Rozšířená Zpráva
+108|Buscar|Cercar|Seek|Rechercher|Hledat
+109|Limpiar|Netejar|Clear|Effacer|Vyčistit
+110|Limpiar Filtro|Netejar Filtre|Clear Filter|Effacer Filtre|Vyčistit Filtr
+111|Filtrar|Filtrar|Filter|Filtrer|Filtrovat
+112|Filtrar datos|Filtrar dades|Filter data|Filtrer les données|Filtrovat Data
+
+113|Añadir condición|Afegir Condició|Add condition|Ajouter condition|Přidat Podmínku
+114|Condición obligatoria|Condició Obligatòria|Mandatory condition|Condition obligatoire|Povinná Podmínka
+115|Listar grupos|Llistar Grups|List groups|Lister groupes|Vypsat Skupiny
+116|Eliminar condición|Eliminar Condició|Remove condition|Retirer condition|Odstranit Podmínku
+117|Click Izq: Seleccionar filas\nClick Dcha: Desmarcar filas|Clic ESQ: Seleccionar files\nClic DRET: Desmarcar files|Click LEFT: Select rows\onClick RIGHT: Uncheck rows|Clic Gauche: Sélectionner lignes\nClic Droit: Désélectionner lignes|Klik Levý: Vybrat řádky\nKlik Pravý: Zrušit výběr řádků
+118|Seleccionar condición|Seleccionar Condició|Select condition|Sélectionner condition|Vybrat Podmínku
+
+119|Click Izq: Minimizar\nClick Dcha: Mostrar todos los filtros|Clic ESQ: Minimitzar\nClic DRET: Mostrar tots els filtres|Click Left: Minimize\nClick Right: Show all filters|Clic Gauche: Minimiser\nClic Droit: Afficher tous les filtres|Klik Levý: Minimalizovat\nKlik Pravý: Zobrazit všechny filtry
+120|Click Izq: Cerrar\nClick Dcha: Cierra todos los filtros|Clic ESQ: Tancar\nClic DRET: Tanca tots els filtres|Click Left: Close\nClick Right: Close all filters|Clic Gauche: Fermer\nClic Droit: Fermer tous les filtres|Klik Levý: Zavřít\nKlik Pravý: Zavřít všechny filtry
+
+121|Anterior|Anterior|Previous|Précédent|Předchozí
+122|Siguiente|Següent|Following|Suivant|Následující
+123|Página|Pàgina|Page|Page|Stránka
+124|Mostrar|Mostrar|Show|Afficher|Zobrazit
+
+125|Se filtra al pulsar [Enter]|Es filtra al prémer [Enter]|Filtered when pressing [Enter]|Filtré en appuyant sur [Enter]|Filtrováno stiskem [Enter]
+126|Al no tener historial de gestión sólo tiene estas opciones disponibles.|Al no tenir historial de gestió només té aquestes opcions disponibles.|Since you have no management history, you only have these options available.|N'ayant pas d'historique de gestion, vous n'avez que ces options disponibles.|Protože nemáte historii správy, máte k dispozici pouze tyto možnosti.
+
+DocLabelUserFrom|De|De|Of|De|Od
+DocLabelUserTo|Para|Per a|For|Pour|Pro
+
+127|Eliminar|Eliminar|Eliminate|Éliminer|Odstranit
+128|Eliminando|Eliminant|Removing|Suppression en cours|Odstraňování
+129|Consultando|Consultant|Consulting|Consultation en cours|Konzultování
+130|Modificando|Modificant|Modifying|Modification en cours|Úprava
+131|Acción por defecto|Acció per defecte|Default action|Action par défaut|Výchozí Akce
+
+132|Modificado|Modificat|Modified|Modifié|Upraveno
+133|Borrado|Esborrat|Erased|Supprimé|Smazáno
+134|Insertado|Inserit|Inserted|Inséré|Vloženo
+135|Visualizado|Visualitzat|Visualized|Visualisé|Zobrazeno
+
+136|Total|Total|Total|Total|Celkem
+137|Número total de registros del listado|Nombre total de registres del llistat|Total number of records in the list|Nombre total d'enregistrements dans la liste|Celkový počet záznamů v seznamu

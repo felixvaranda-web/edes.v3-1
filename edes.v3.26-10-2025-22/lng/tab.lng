@@ -1,0 +1,201 @@
+[Language] es,ca,en,fr,cs
+2|Insertar|Inserir|Insert|Insérer|Vložit
+3|Borrar|Esborrar|Delete|Supprimer|Smazat
+4|Recuperar de papelera|Recuperar de paperera|Recover from trash|Récupérer de la corbeille|Obnovit z koše
+5|Enviar a papelera|Enviar a paperera|Send to trash|Envoyer à la corbeille|Odeslat do koše
+6|Nueva Consulta|Nova Consulta|New search|Nou rapport|Nová Konzultace
+7|Modificar|Modificar|Modify|Modifier|Upravit
+8|Buscar|Cercar|Search|Rechercher|Hledat
+10|Click Izq: Resultado de la búsqueda\nClick Izq [ctrl]: Resultado de la búsqueda en una subventana\nClick Dch: Ficha de búsqueda   listado de resultados|Clic ESQ: Resultat de la cerca\nClic ESQ [ctrl]: Resultat de la cerca en una subfinestra\nClic DRET: Fitxa de cerca   llistat de resultats|Click Left: Search result\nClick Left [ctrl]: Search result in a subwindow\nClick Right: Search tab   list of results|Clic Gauche: Résultat de la recherche\nClic Gauche [ctrl]: Résultat de la recherche dans une sous-fenêtre\nClic Droit: Fiche de recherche   liste de résultats|Klik Levý: Výsledek hledání\nKlik Levý [ctrl]: Výsledek hledání v podokně\nKlik Pravý: Karta hledání   seznam výsledků
+12|Limpiar datos|Netejar dades|Clear data|Nettoyer les données|Vyčistit data
+13|Click Izq: Consultar|Clic ESQ: Consultar|Click Left: Consult|Clic Gauche: Consulter|Klik Levý: Konzultovat
+14|Click Dch: Buscar para Consultar|Clic DRET: Buscar per Consultar|Click Right: Search to Consult|Clic Droit: Chercher pour Consulter|Klik Pravý: Hledat ke Konzultaci
+15|Click Izq: Modificar|Clic ESQ: Modificar|Click Left: Modify|Clic Gauche: Modifier|Klik Levý: Upravit
+16|Click Dch: Buscar para Modificar|Click DRET: Buscar per Modificar|Click Right: Search to Modify|Clic Droit: Chercher pour Modifier|Klik Pravý: Hledat k Úpravě
+17|Click Izq: Borrar|Clic ESQ: Esborrar|Click Left: Delete|Clic Gauche: Supprimer|Klik Levý: Smazat
+18|Click Dch: Buscar para Borrar|Clic DRET: Buscar per Esborrar|Click Right: Search to Delete|Clic Droit: Chercher pour Supprimer|Klik Pravý: Hledat ke Smazání
+19|Insertar|Inserir|Insert|Insérer|Vložit
+20|Log de Usuarios|Log d´Usuaris|Users Log|Log des Utilisateurs|Log Uživatelů
+21|Otros datos|Altres dades|Other data|Autres données|Jiné údaje
+22|Histórico de Movimientos|Històric de Moviments|History of Movements|Historique des Mouvements|Historie Pohybů
+24|Menú de acceso rápido|Menú d'accés ràpid|Quick access menu|Menu d'accès rapide|Rychlé přístupové menu
+25|Cerrar ventana|Tancar finestra|Close window|Fermer la fenêtre|Zavřít okno
+26|Ver fichero|Veure fitxer|View file|Voir fichier|Zobrazit soubor
+27|Calendario|Calendari|Calendar|Calendrier|Kalendář
+28|Correo electrónico|Correu electrònic|Email|Courrier électronique|E-mail
+29|Web|Web|Web|Web|Web
+30|Corrector ortográfico|Corrector ortogràfic|Speller|Correcteur orthographique|Kontrola pravopisu
+31|Imprimir documento\n(del servidor)|Imprimir document\n(del servidor)|Print document\n(from server)|Imprimer document\n(du serveur)|Vytisknout dokument\n(ze serveru)
+32|Examinar...|Examinar...|Examine...|Examiner...|Procházet...
+33|Seleccionar fichero|Seleccionar fitxer|Select file|Sélectionner fichier|Vybrat soubor
+34|Ver documento\n(del PC)|Veure document\n(del PC)|View document\n(from PC)|Voir document\n(du PC)|Zobrazit dokument\n(z PC)
+35|(del PC)|(del PC)|(PC's)|(du PC)|(z PC)
+36|Ver documento\n(del servidor)|Veure document\n(del servidor)|View document\n(from server)|Voir document\n(du serveur)|Zobrazit dokument\n(ze serveru)
+37|(del servidor)|(del servidor)|(server's)|(du serveur)|(ze serveru)
+38|Borrar documento\n(del servidor)|Esborrar document\n(del servidor)|Delete document\n(from server)|Supprimer document\n(du serveur)|Smazat dokument\n(ze serveru)
+39|Modificar documento\n(del servidor)|Modificar document\n(del servidor)|Modify document\n(from server)|Modifier document\n(du serveur)|Upravit dokument\n(ze serveru)
+40|Imprimir documento\n(del servidor)|Imprimir document\n(del servidor)|Print document\n(from server)|Imprimer document\n(du serveur)|Vytisknout dokument\n(ze serveru)
+41|Escanear documento|Escanejar document|Scan document|Scanner document|Skenovat dokument
+42|Borrar entrada|Esborrar entrada|Delete entry|Supprimer entrée|Smazat položku
+43|Añadir Entrada|Afegir Entrada|Add entry|Ajouter Entrée|Přidat položku
+44|Desactiva el select|Desactiva el select|Disable select|Désactiver la sélection|Deaktivovat výběr
+45|Calendario|Calendari|Calendar|Calendrier|Kalendář
+46|Buscar|Cercar|Search|Rechercher|Hledat
+47|Seleccionar palabras clave|Seleccionar paraules clau|Select key words|Sélectionner mots-clés|Vybrat klíčová slova
+48|Copiar|Copiar|Copy|Copier|Kopírovat
+49|Pegar|Pegar|Paste|Coller|Vložit
+50|Fijar valor por defecto|Fixar valor per defecte|Set value by default|Définir valeur par défaut|Nastavit výchozí hodnotu
+51|Memorizar|Memoritzar|Memorize|Mémoriser|Zapamatovat
+52|Copiar del exterior|Copiar de l´exterior|Copy from the exterior|Copier de l'extérieur|Kopírovat zvenčí
+53|Error en el modo "#"|ERROR en la Manera "#"|Error in the "#" mode|ERREUR dans le mode "#"|Chyba v režimu "#"
+54|Error:<br>Objeto "#" no encontrado|ERROR:<br>Objecte "#" no oposat|Error:<br>Item "#" not found|ERREUR:<br>Objet "#" non trouvé|Chyba:<br>Objekt "#" nenalezen
+55|El tamaño máximo por fichero excede la configuración: # Bytes|La grandària màxima per fitxer excedeix la configuració: # Bytes|The maximum size for the data file surpass the configuration: # Bytes|La taille maximale par fichier dépasse la configuration: # Bytes|Maximální velikost souboru překračuje konfiguraci: # Bytes
+56|Ver fichero|Veure Fitxer|View file|Voir Fichier|Zobrazit soubor
+57|Error:<br>El parámetro "#" solo puede usarse con indices de un solo campo|ERROR:<BR>El paràmetre "#" solament pot usar-se amb índexs d´un sol camp|Error:<br>The parameter "#" can only be used with just one field indexes|ERREUR:<BR>Le paramètre "#" ne peut être utilisé qu'avec des indices d'un seul champ|Chyba:<br>Parametr "#" lze použít pouze s indexy jednoho pole
+58|Error:<br>Tipo de control "#1" no soportado<br>tipo de edición "#2"<br>en el campo "#3"|ERROR:<br>Tipus de Control "#1" no suportat<br>Tipus d\'Edició \"#2\"<BR>En el camp \"#3\"|Error:<br>Control type "#1" not supported<br>edition type "#2"<br>in the field "#3"|ERREUR:<br>Type de contrôle "#1" non supporté<br>Type d'édition "#2"<BR>Dans le champ "#3"|Chyba:<br>Typ ovládání "#1" není podporován<br>typ editace "#2"<br>v poli "#3"
+59|Error:<br>El fichero "#" no está devolviendo una matriz|ERROR:<br>El fitxer "#" no està retornant una matriu|Error:<br>The data file "#" is not giving back a matrix|ERREUR:<br>Le fichier "#" ne retourne pas de matrice|Chyba:<br>Soubor "#" nevrací matici
+60|Registros encontrados: #1<br>Nº máximo de registros a visualizar: #2<br>Active más condiciones|Registres oposats: #1<br>Nº màxim de registres a visualitzar: #2<br>Activi més condicions|Records found: #1<br>Maximum Nº of records to extract: #2<br>Activate more conditions|Enregistrements trouvés: #1<br>Nº maximum d'enregistrements à afficher: #2<br>Activez plus de conditions|Nalezeno záznamů: #1<br>Maximální počet záznamů k zobrazení: #2<br>Aktivujte více podmínek
+61|Demasiados registros a extraer.<br>Nº máximo de registros a visualizar: #.<br>Active más condiciones|Massa registres a extreure.<br>Nº màxim de registres a visualitzar: #.<br>Activi més condicions|Too many records to extract.<br>Maximum Records Nº to extract: #.<br>Activate more conditions|Trop d'enregistrements à extraire.<br>Nº maximum d'enregistrements à afficher: #.<br>Activez plus de conditions|Příliš mnoho záznamů k extrakci.<br>Maximální počet záznamů k zobrazení: #.<br>Aktivujte více podmínek
+62|Registros encontrados fuera de tu ambito: #1<br>nº máximo de registros a visualizar: #2<br>active más condiciones|Registres oposats FORA DEL TEU ÀMBIT: #1<br>Nº màxim de registres a visualitzar: #2<br>Activi més condicions|Records found outside your field: #1<br>maximum nº of records to extract: #2<br>activate more conditions|Enregistrements trouvés HORS DE VOTRE DOMAINE: #1<br>nº maximum d'enregistrements à afficher: #2<br>activez plus de conditions|Nalezeno záznamů mimo váš rozsah: #1<br>maximální počet záznamů k zobrazení: #2<br>aktivujte více podmínek
+63|Demasiados registros a extraer.<br>Nº máximo de registros a visualizar: #<br>Active más condiciones|Massa registres a extreure.<br>Nº màxim de registres a visualitzar: #<br>Activi més condicions|Too many records to extract.<br>Maximum Records Nº to extract: #.<br>Activate more conditions|Trop d'enregistrements à extraire.<br>Nº maximum d'enregistrements à afficher: #<br>Activez plus de conditions|Příliš mnoho záznamů k extrakci.<br>Maximální počet záznamů k zobrazení: #<br>Aktivujte více podmínek
+64|Objeto no soportado "#"|Objecte no suportat "#"|Non supported Item "#"|Objet non supporté "#"|Nepodporovaný objekt "#"
+65|Ya hay un registro igual|Ja hi ha un registre igual|This record is alredy in use|Il existe déjà un enregistrement identique|Záznam již existuje
+66|No hay registros|No hi ha registres|There are no records|Il n'y a pas d'enregistrements|Žádné záznamy
+67|No hay registros que cumplan la condición|No hi ha registres que compleixin la condició|No data matching the condition|Il n'y a pas d'enregistrements correspondant à la condition|Žádné záznamy splňující podmínku
+68|Insertado|INSERIT|Added|INSÉRÉ|Vloženo
+69|Modificado|MODIFICAT|Modified|MODIFIÉ|Upraveno
+70|Borrado|ESBORRAT|Deleted|SUPPRIMÉ|Smazáno
+71|Recuperado|RECUPERAT|Recovered|RÉCUPÉRÉ|Obnoveno
+72|Cargando PDF|Carregant PDF|Loading PDF|Chargement PDF|Načítání PDF
+73|Cargando XLS|Carregant XLS|Loading XLS|Chargement XLS|Načítání XLS
+74|Cargando MDB|Carregant MDB|Loading MDB|Chargement MDB|Načítání MDB
+75|Error: Fichero excede el máximo tamaño permitido|ERROR: Fitxer excedeix la màxima grandària permesa|Error: The data file surpass the maximum size allowed|ERREUR: Fichier dépasse la taille maximale autorisée|Chyba: Soubor překračuje maximální povolenou velikost
+76|Error: Fichero demasiado grande|ERROR: Fitxer massa gran|Error: The data file is too big|ERREUR: Fichier trop grand|Chyba: Soubor je příliš velký
+77|Error: Fichero incompleto|ERROR: Fitxer incomplet|Error: Incomplete data file|ERREUR: Fichier incomplet|Chyba: Neúplný soubor
+78|Error: Fichero no cargado|ERROR: Fitxer no carregat|Error: Data file not loaded|ERREUR: Fichier non chargé|Chyba: Soubor nebyl načten
+79|Enviado a papelera|ENVIAT A PAPERERA|Sent to trash|ENVOYÉ À LA CORBEILLE|Odesláno do koše
+80|Ficha #|FITXA #|File of #|FICHE #|Karta #
+81|Recuperar #|RECUPERAR #|Recover #|RÉCUPÉRER #|Obnovit #
+82|Consultar #|CONSULTAR #|View #|CONSULTER #|Konzultovat #
+83|Modificar #|MODIFICAR #|Modify #|MODIFIER #|Upravit #
+84|Insertar #|INSERIR #|Insert #|INSÉRER #|Vložit #
+85|Borrar #|ESBORRAR #|Delete #|SUPPRIMER #|Smazat #
+86|Variables modificadas|VARIABLES MODIFICADES|Variables modified|VARIABLES MODIFIÉES|Změněné proměnné
+87|Acción no soportada|Acció no suportada|Non supported action|Action non supportée|Nepodporovaná akce
+88|Error: Fichero excede el maximo tamaño permitido|ERROR: FITXER EXCEDEIX LA MÀXIMA GRANDÀRIA PERMESA|Error: The data file surpass the maximum size allowed|ERREUR: FICHIER DÉPASSE LA TAILLE MAXIMALE AUTORISÉE|Chyba: Soubor překračuje maximální povolenou velikost
+89|Error: Fichero demasiado grande|ERROR: FITXER MASSA GRAN|Error: The data file ir too big|ERREUR: FICHIER TROP GRAND|Chyba: Soubor je příliš velký
+90|Error: Fichero incompleto|ERROR: FITXER INCOMPLET|Error: Incomplete data file|ERREUR: FICHIER INCOMPLET|Chyba: Neúplný soubor
+91|Error: Fichero demasiado grande|ERROR: FITXER MASSA GRAN|Error: The data file ir too big|ERREUR: FICHIER TROP GRAND|Chyba: Soubor je příliš velký
+92|Error: Fichero no copiado "#"|ERROR: FITXER NO COPIAT "#"|Error: "#" data file not copied|ERREUR: FICHIER NON COPIÉ "#"|Chyba: Soubor "#" nebyl zkopírován
+93|Operacion anulada.<br>el registro ha sido modificado por otro<br>usuario desde que visualizó la ficha.<br>vuelva a realizar la operación|OPERACIÓ ANÚLADA.<br>El registre ha estat modificat per<br>un altre usuari des que va visualitzar la fitxa.<br>Torni a realitzar l\'operació|Operation canceled.<br>the record has been modified by other<br>user since you saw the form.<br>try to do the operation again|OPÉRATION ANNULÉE.<br>L'enregistrement a été modifié par un autre<br>utilisateur depuis la visualisation de la fiche.<br>Veuillez refaire l'opération|Operace zrušena.<br>Záznam byl upraven jiným<br>uživatelem od zobrazení karty.<br>Zopakujte operaci
+94|Error:<br>No se ha podido recuperar el registro<br>por estar activo actualmente|ERROR:<br>NO S´HA POGUT RECUPERAR EL REGISTRE<br>PER ESTAR ACTIU ACTUALMENT|Error:<br>The record could not be recovered<br>due to being active at present|ERREUR:<br>L'ENREGISTREMENT N'A PAS PU ÊTRE RÉCUPÉRÉ<br>CAR IL EST ACTUELLEMENT ACTIF|Chyba:<br>ZÁZNAM NEBYL OBNOVEN<br>protože je aktuálně aktivní
+95|Error: No se ha borrado el fichero adjunto|ERROR: NO S´HA ESBORRAT EL FITXER ADJUNT|Error: The attached file data is not deleted|ERREUR: LE FICHIER JOINT N'A PAS ÉTÉ SUPPRIMÉ|Chyba: Připojený soubor nebyl smazán
+96|Error en el campo "#"|ERROR en el Camp "#"|Error in the field "#"|ERREUR dans le champ "#"|Chyba v poli "#"
+97|Click Dcha: Elimina selección|Clic DRET: Elimina selecció|Click RIGHT: Delete selection|Clic Droit: Supprimer sélection|Klik Pravý: Smazat výběr
+98|Negrita|Negreta|Bold|Gras|Tučné
+99|Itálica|Itàlica|italic|Italique|Kurzíva
+100|Subrayado|Subratllat|Underlined|Souligné|Podtržené
+101|Elimina formato|Elimina format|Delete format|Supprimer le format|Smazat formát
+102|Color texto|Color text|Text color|Couleur du texte|Barva textu
+103|Color fondo|Color fons|Background color|Couleur de fond|Barva pozadí
+104|Extra Grande|Extra Gran|Extra big|Extra-large|Extra Velké
+105|Grande|Gran|Big|Grand|Velké
+106|Normal|Normal|Normal|Normal|Normální
+107|Justificación izquierda|Justificació esquerra|Left justification|Justification à gauche|Zarovnání vlevo
+108|Centrado|Centrat|Centered|Centré|Centrováno
+109|Justificación completa|Justificació completa|Full justification|Justification complète|Plné zarovnání
+110|Disminuir sangría|Disminuir sagnia|Decrease indent|Diminuer le retrait|Zmenšit odsazení
+111|Aumentar sangría|Augmentar sagnia|Increase indent|Augmenter le retrait|Zvětšit odsazení
+112|Lista ordenada|Llista ordenada|Ordered list|Liste ordonnée|Seřazený seznam
+113|Lista con marcas|Llista amb marques|List with marks|Liste à puces|Seznam se značkami
+114|Insertar imagen|Inserir imatge|Insert image|Insérer image|Vložit obrázek
+115|Corrector ortográfico|Corrector ortogràfic|Spelling checker|Correcteur orthographique|Kontrola pravopisu
+116|Anular cambios|Anul·lar canvis|Cancel changes|Annuler les changements|Zrušit změny
+117|Grabar|Gravar|Save|Enregistrer|Uložit
+118|Color por defecto|Color per defecte|default color|Couleur par défaut|Výchozí barva
+119|Click Izq: Acción a ejecutar|Clic ESQ: Acció a executar|Click Left: Action to execute|Clic Gauche: Action à exécuter|Klik Levý: Akce k provedení
+120|Nuevo párrafo|Nou paràgraf|New paragraph|Nouveau paragraphe|Nový odstavec
+121|Checkbox\nClick Dch conmuta "checked"|Checkbox\nClic DRET commuta "checked"|Checkbox\nClick Right toggles "checked"|Case à cocher\nClic Droit bascule "coché"|Zaškrtávací pole\nKlik Pravý přepíná "zaškrtnuto"
+122|Facebook|Facebook|Facebook|Facebook|Facebook
+123|Twitter|Twitter|Twitter|Twitter|Twitter
+124|Contar|Explicar|Count|Compter|Počítat
+125|Click Dch: Últimos resultados|Clic DRET: Últims resultats|Click Right: Latest results|Clic Droit: Derniers résultats|Klik Pravý: Poslední výsledky
+126|Procesando...|Processant...|Processing...|Traitement en cours...|Zpracovává se...
+127|Enviando fichero "#"|Enviant fitxer "#"|Sending file "#"|Envoi du fichier "#"|Odesílání souboru "#"
+128|Preparando fichero "#"|Preparant fitxer "#"|Preparing file "#"|Préparation du fichier "#"|Příprava souboru "#"
+129|Minimizar|Minimitzar|Minimize|Minimiser|Minimalizovat
+130|Maximizar|Maximitzar|Maximize|Maximiser|Maximalizovat
+131|Fichero modificado|Fitxer modificat|Modified file|Fichier modifié|Upravený soubor
+132|Descargar documento a modificar|Descarregar document a modificar|Download document to modify|Télécharger document à modifier|Stáhnout dokument k úpravě
+133|Click Dch [ctrl]: Cambiar la acción|Clic DRET [ctrl]: Canviar la acció|Click Right [ctrl]: Change action|Clic Droit [ctrl]: Changer l'action|Klik Pravý [ctrl]: Změnit akci
+134|Calendario de Periodos|Calendari de Períodes|Periods Calendar|Calendrier des Périodes|Kalendář období
+135|Espacio en disco|ESPAI EN DISC|Disc space|Espace disque|Místo na disku
+136|Espacio Total|Espai Total|Total space|Espace total|Celkové místo
+137|Espacio Libre|Espai Lliure|Free space|Espace libre|Volné místo
+138|Posible suplantación de identidad.<br>La aplicación se cerrará.|Possible suplantació d´identitat.<br>L´aplicació es tancarà.|Possible phishing.<br>The application will be closed.|Possible usurpation d'identité.<br>L'application sera fermée.|Možné zneužití identity.<br>Aplikace bude uzavřena.
+139|Importar #|IMPORTAR #|Import #|Importer #|Importovat #
+140|La opción de importar solo se puede ejecutar en la ventana principal|L´opció d´IMPORTAR solament es pot executar en la finestra principal|The import option can only be executed in the main window|L'option d'importer ne peut être exécutée que dans la fenêtre principale|Možnost importu lze spustit pouze v hlavním okně
+141|No hay espacio libre en esta opción|No hi ha espai lliure en aquesta opció|There is no free space in this option|Il n'y a pas d'espace libre pour cette option|Pro tuto možnost není volné místo
+142|Activa el select|Activa el select|Activate select|Activer la sélection|Aktivovat výběr
+143|Insertado|INSERIT|Added|INSÉRÉ~S'insère dans l'auxiliaire et la sélection|Vloženo~Vloží se do pomocné a výběrové tabulky
+144|Click Izq: Examinar...\nClick Dch: Establece un directorio por defecto|Clic ESQ: Examinar...\nClic DRET: Estableix un directori per defecte|Click Left: Browse...\nClick Right: Set a default directory|Clic Gauche: Examiner...\nClic Droit: Définir un répertoire par défaut|Klik Levý: Procházet...\nKlik Pravý: Nastavit výchozí adresář
+145|Buscar para ...|Cercar per ...|Search for ...|Chercher pour ...~MENU|Hledat pro ...~MENU
+146|Borrar|Esborrar|Delete|Supprimer|Smazat
+147|Consultar|Consultar|Consult|Consulter|Konzultovat
+148|Modificar|Modificar|Modify|Modifier|Upravit
+149|Insertar|Inserir|Insert|Insérer|Vložit
+150|Opciones|Opcions|Options|Options~MENU|Možnosti~MENU
+151|Borrar|Esborrar|Delete|Supprimer|Smazat
+152|Modificar|Modificar|Modify|Modifier|Upravit
+153|Consultar|Consultar|Consult|Consulter|Konzultovat
+154|Limpiar datos|Netejar dades|Clean data|Nettoyer les données|Vyčistit data
+155|Convertir en consulta|Convertir en consulta|Convert to query|Convertir en requête|Převést na dotaz
+156|Resultado en SubVentana|Resultat en SubFinestra|Result in SubWindow|Résultat dans une Sous-fenêtre|Výsledek v podokně
+157|Búsqueda con SubListado|Cerca amb SubLlistat|Search with SubList|Recherche avec Sous-liste|Hledání s podseznamem
+158|Histórico de Movimientos|Històric de Moviments|History of Movements|Historique des Mouvements|Historie Pohybů
+159|Log de Usuarios|Log d´Usuaris|User Log|Log Utilisateur|Log Uživatelů
+160|Otros datos|Altres dades|Other data|Autres données|Jiné údaje
+161|Convertir en contar|Convertir en contar|Convert to count|Convertir en compter|Převést na počítání
+162|(Sin datos)|(Sense dades)|(No data)|(Sans données)|(Bez dat)
+163|(Con datos)|(Amb dades)|(with data)|(Avec données)|(S daty)
+164|Cambiar a ...|Canviar a ...|Switch to ...|Passer à ...~MENU|Přepnout na ...~MENU
+165|Seleccionar|Seleccionar|Select|Sélectionner|Vybrat
+166|Borrar|Esborrar|Delete|Supprimer|Smazat
+167|Lista de selección|Llista de selecció|Selection list|Liste de sélection|Seznam výběru
+168|Eliminar valor por defecto|Eliminar valor per defecte|Delete default value|Supprimer la valeur par défaut|Odstranit výchozí hodnotu
+169|Click Izq: Enviar EMail\nClick Dch: Insertar EMail en Lista Róbinson|Clic ESQ: Enviar EMail\nClic DRET: Inserir EMail a Llista Róbinson|Click Left: Send EMail\nClick Right: Insert EMail in Robinson List|Clic Gauche: Envoyer EMail\nClic Droit: Insérer EMail dans Liste Robinson|Klik Levý: Odeslat E-mail\nKlik Pravý: Vložit E-mail do Robinsonova Seznamu
+170|Resultado en ventana actual|Resultat en finestra actual|Result in current window|Résultat dans la fenêtre actuelle|Výsledek v aktuálním okně
+171|- Para mover la imagen haga click sobre ella y desplace el ratón.<br>- Para cambiar el tamaño pulse la tecla control rueda del ratón,<br>si a la vez pulsa la tecla shift el zoom será 10 veces mayor.<br>- Para ajustar la imagen pulse dobleclick.<br>- Para dejar la imagen original pulse el botón derecho del ratón.|- Per moure la imatge faci clic sobre ella i desplaci el ratolí.<br>- Per canviar la grandària premi la tecla control roda del ratolí,<br>si a la vegada prem la tecla shift el zoom serà 10 vegades major.<br>- Per ajustar la imatge premi dobleclic.<br>- Per deixar la imatge original premi el botó dret del ratolí.|- To move the image, click on it and move the mouse.<br>- To change the size, press the mouse wheel control key,<br>if you press the shift key at the same time, the zoom will be 10 times greater.<br>- To adjust double-click the image.<br>- To leave the original image, press the right mouse button.|- Pour déplacer l'image, cliquez dessus et déplacez la souris.<br>- Pour changer la taille, appuyez sur la touche contrôle + molette de la souris,<br>si vous appuyez en même temps sur la touche shift le zoom sera 10 fois plus grand.<br>- Pour ajuster l'image, double-cliquez.<br>- Pour conserver l'image originale, appuyez sur le bouton droit de la souris.|- Pro přesunutí obrázku klikněte na něj a posuňte myš.<br>- Pro změnu velikosti stiskněte klávesu Control a kolečko myši,<br>pokud zároveň stisknete klávesu Shift, zoom bude 10krát větší.<br>- Pro přizpůsobení obrázku dvojklikněte.<br>- Pro ponechání původního obrázku stiskněte pravé tlačítko myši.
+172|Valor no modificable en "#"|Valor no modificable en "#"|Non-changeable value in "#"|Valeur non modifiable dans "#"|Hodnota neměnitelná v "#"
+173|Campo obligatorio: #|Camp obligatori: #|Obligatory field: #|Champ obligatoire: #|Povinné pole: #
+174|Error en la longitud del campo|Error en la longitud del camp|Field length error|Erreur dans la longueur du champ|Chyba v délce pole
+175|Error en el contenido del campo|Error en el contingut del camp|Field content error|Erreur dans le contenu du champ|Chyba v obsahu pole
+176|Listado|Llistat|List|Liste|Seznam
+177|Click Izq: Examinar...\nClick Dch: Previsualizar|Clic ESQ: Examinar...\nClic DRET: Previsualitzar|Click Left: Browse...\nClick Right: Preview|Clic Gauche: Examiner...\nClic Droit: Prévisualiser|Klik Levý: Procházet...\nKlik Pravý: Náhled
+178|Previsualizar/Descargar|Previsualitzar/Descarregar|Preview/Download|Prévisualiser/Télécharger|Náhled/Stáhnout
+179|Informe|Informe|Report|Rapport|Zpráva
+180|Resultado de la búsqueda|Resultat de la cerca|Search result|Résultat de la recherche|Výsledek hledání
+181|Insertar|Inserir|Insert|Insérer|Vložit
+182|Borrar|Esborrar|Delete|Supprimer|Smazat
+183|Ver|Veure|View|Voir|Zobrazit
+184|Modificar|Modificar|Update|Modifier|Upravit
+185|Descargar|Descarregar|Download|Télécharger|Stáhnout
+186|Establece valores por defecto|Estableix valors per defecte|Set default values|Définir les valeurs par défaut|Nastavit výchozí hodnoty
+187|Insertar dato en tabla auxiliar|Inserir dada en taula auxiliar|Insert data in auxiliary table|Insérer donnée dans la table auxiliaire|Vložit data do pomocné tabulky
+188|Posición de la primera etiqueta|Posició de la primera etiqueta|First label position|Position de la première étiquette|Pozice první etikety
+189|Seleccionar color|Seleccionar color|Select color|Sélectionner couleur|Vybrat barvu
+190|Menú|Menú|Menu|Menu|Menu
+191|Ayuda|Ajuda|Help|Aide|Nápověda
+
+192|Exportar|Exportar|Export|Exporter|Exportovat
+193|Pasar a PDF|Canviar a PDF|Go to PDF|Passer à PDF|Do PDF
+194|Pasar a Excel|Passar a Excel|Go to Excel|Passer à Excel|Do Excelu
+195|Pasar a XML|Passar a XML|Go to XML|Passer à XML|Do XML
+196|Pasar a TXT|Passar a TXT|Go to TXT|Passer à TXT|Do TXT
+197|Pasar a CSV|Passar a CSV|Go to CSV|Passer à CSV|Do CSV
+
+198|Ejecutar en 2º plano|Executar en 2n pla|Run in background|Exécuter en arrière-plan|Spustit na pozadí
+199|Ventana actual|Finestra actual|Current window|Fenêtre actuelle|Aktuální okno
+200|Ver clave|Veure clau|See key|Voir clé|Zobrazit klíč
+201|Fichero potencialmente peligroso|Fitxer potencialment perillós|Potentially dangerous file|Fichier potentiellement dangereux|Potenciálně nebezpečný soubor
+202|El campo de selección ha excedido el límite máximo de # registros|El camp de selecció ha excedit el límit màxim de # registres|The selection field has exceeded the maximum limit of # records|Le champ de sélection a dépassé la limite maximale de # enregistrements|Výběrové pole překročilo maximální limit # záznamů

@@ -1,0 +1,46 @@
+[Title]=Inventario Base de Datos
+[Format],Mb
+[PDFVar]PDF_AltoLetra = 10
+[Fields]
+Concepto|nombre|N|T|15||-|||
+Número|numero|+|T|15||-|||
+[DBSql]l
+$TTablas = 0;
+$TCampos = 0;
+$TIndices = 0;
+$TReg = 0;
+$TReferencial = 0;
+$TTriggers = 0;
+$TProcedures = 0;
+$TVistas = 0;
+if( SS::isDriver("informix") ){
+SS::query("select tabname,tabid from systables where tabid>100 and tabtype='T'");
+while( $NomTabla = SS::get("num") ) $DimTabla[] = array( $NomTabla[0], $NomTabla[1] );
+$TTablas = count($DimTabla);
+for( $n=0; $n<$TTablas; $n++ ){
+$TReg     += SS::count( $DimTabla[$n][0] );
+$TCampos  += SS::count( 'syscolumns', 'tabid='.$DimTabla[$n][1] );
+$TIndices += SS::count( 'sysindexes', 'tabid='.$DimTabla[$n][1] );
+}
+$TVistas = SS::count( 'systables', 'tabid>100 and tabtype="V"' );
+}else{
+SS::query( 'show tables' );
+while( $NomTabla = SS::get("num") ) $DimTabla[] = $NomTabla[0];
+$TTablas = count($DimTabla);
+for( $n=0; $n<$TTablas; $n++ ){
+if( mb_substr_count($DimTabla[$n],'.')>0 ) continue;
+$TReg += SS::count( $DimTabla[$n] );
+SS::query( 'SHOW FIELDS FROM '.$DimTabla[$n] );
+while( $row = SS::get() ) $TCampos++;
+SS::query( 'SHOW KEYS FROM '.$DimTabla[$n] );
+while( $row = SS::get() ) $TIndices++;
+}
+}
+$usuCursor[] = array( 'TABLAS'			, $TTablas );
+$usuCursor[] = array( 'INDICES'			, $TIndices );
+$usuCursor[] = array( 'CAMPOS'			, $TCampos );
+$usuCursor[] = array( 'INTEGRIDAD REF.'	, $TReferencial );
+$usuCursor[] = array( 'TRIGGERS' 		, $TTriggers );
+$usuCursor[] = array( 'PROCEDURES'		, $TProcedures );
+$usuCursor[] = array( 'REGISTROS'		, $TReg );
+$usuCursor[] = array( 'VISTAS'			, $TVistas );

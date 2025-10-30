@@ -1,0 +1,83 @@
+# --------------
+# TERRITORIALES
+# --------------
+
+CREATE TABLE pais (
+   cod_pais char(3) NOT NULL,
+   nom_pais char(25),
+   PRIMARY KEY (cod_pais),
+   KEY nom (nom_pais)
+);
+
+CREATE TABLE auto (
+   cod_auto char(2) NOT NULL,
+   nom_auto char(20),
+   PRIMARY KEY (cod_auto),
+   KEY nom (nom_auto)
+);
+
+CREATE TABLE prov (
+   cod_auto char(2) NOT NULL,
+   cod_prov char(2) NOT NULL,
+   nom_prov char(15),
+   PRIMARY KEY (cod_auto,cod_prov),
+   KEY nom (nom_prov)
+);
+
+CREATE TABLE muni (
+   cod_prov char(2) NOT NULL,
+   cod_muni char(3) NOT NULL,
+   nom_muni char(30),
+   PRIMARY KEY (cod_prov,cod_muni),
+   KEY nom (nom_muni)
+);
+
+CREATE TABLE distrito (
+   cod_prov char(2) NOT NULL,
+   cod_muni char(3) NOT NULL,
+   cod_distrito char(3),
+   nom_distrito char(30),
+   KEY cod_distrito (cod_prov,cod_muni,cod_distrito),
+   KEY cod_muni (cod_muni)
+);
+
+CREATE TABLE barrio (
+   cod_prov char(2) NOT NULL,
+   cod_muni char(3) NOT NULL,
+   cod_distrito char(3),
+   cod_barrio char(3),
+   nom_barrio char(30),
+   KEY cod_distrito (cod_prov,cod_muni,cod_distrito,cod_barrio),
+   KEY cod_barrio (cod_barrio),
+   KEY nom_barrio (nom_barrio)
+);
+
+CREATE TABLE postal (
+   cod_prov char(2),
+   cod_muni char(3),
+   cod_postal char(5),
+   numero int(4),
+   nom_loca char(40),
+   KEY numero (numero),
+   KEY cod_postal (cod_postal),
+   KEY nom_loca (nom_loca)
+);
+
+# -------
+# VARIAS
+# -------
+
+CREATE TABLE banco (
+   cod_banco char(4) NOT NULL,
+   nom_banco char(36) NOT NULL,
+   PRIMARY KEY (cod_banco)
+);
+
+CREATE TABLE sucursal (
+   cod_banco char(4) NOT NULL,
+   cod_suc char(4) NOT NULL,
+   domicilio char(36),
+   cod_post char(5),
+   nom_loca char(36),
+   PRIMARY KEY (cod_banco, cod_suc)
+);

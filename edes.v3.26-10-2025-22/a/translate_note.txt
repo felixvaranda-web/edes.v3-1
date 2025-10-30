@@ -1,0 +1,334 @@
+		/* [C]aption / [T]itle */
+		/*
+		    id     | id   | + | T | 5  || * |||
+		    type   | type | N | T | 1  || * |||
+		    Código | key  | # | T | 30 || * |||
+		    ...
+		*/
+		/*		
+		    [Alta] => Array(
+	            [0] => Alta		key
+	            [1] => Alta		es
+	            [2] => 
+	            [3] => 
+	            [4] => 
+	        )
+		*/
+
+/*	
+	// importar datos desde un fichero plano
+	$data = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+	
+	$sql = "SELECT COUNT(DISTINCT caption) FROM gs_op WHERE caption IS NOT NULL AND caption <> ''";
+	DB::query($sql);
+	$totalFilas = DB::get("num");
+	
+	if( count($data) != $totalFilas[0] ){
+		eMessage("HE", "El fichero plano y la DDBB no tienen los mismos registros");
+	}
+	$index = 0;
+	
+	if( $_POST["type"]=="C" ){
+		DB::query("select id, caption	from gs_op where type='O' and caption is not null and caption<>''	group by caption order by caption");
+	}else{
+		DB::query("select id, tip		from gs_op where 			  tip is not null and tip<>''			group by tip order by tip");		//toDo: ojo no está:  type='O' and
+	}
+	while( $r = DB::get() ){
+		DB::update("gs_op_translation", ["text_en"=>trim($data[$index++])], ["id"=>$r["id"]], 2);
+	}
+*/
+
+[Note]
+	$idioma = 3; // índice del idioma deseado (0 = primer idioma)
+	$lineas = file('idiomas.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+	$traducciones = [];
+	
+	foreach ($lineas as $linea) {
+	    $partes = explode('|', $linea);
+	    $traducciones[] = $partes[$idioma] ?? '';
+	}
+
+[PHPIni] ?-NO-
+	/**
+	 * Busca ficheros con la extensión ".lng" de forma recursiva 
+	 * y almacena el directorio y el nombre del fichero en una matriz, 
+	 * sin usar FilesystemIterator.
+	 *
+	 * @param string $directorioRaiz El directorio donde comenzar la búsqueda.
+	 * @return array Una matriz de ficheros encontrados.
+	 */
+	function buscarFicherosLng( $directorioRaiz, $expSeek ){
+	    $ficherosEncontrados = array();
+	
+	    try {
+	        $directorio = new RecursiveDirectoryIterator($directorioRaiz);
+	        $recursivo	= new RecursiveIteratorIterator($directorio);
+			$filtro		= new RegexIterator($recursivo, $expSeek);					// 		'/\.lng$/i'  -  '/(\.edf|\idf)$/i'
+	
+	        foreach( $filtro as $fichero ){
+	            if( !$fichero->isFile() ){
+					continue;
+				}
+				$file = str_replace($directorioRaiz."/", "", $fichero->getPathname());
+				$ficherosEncontrados[] = $file;
+	        }
+	        
+	    }catch( Exception $e ){
+	        echo "Error al buscar directorios: " . $e->getMessage() . "\n";
+	        return array();
+	    }
+	
+	    return $ficherosEncontrados;
+	}
+	
+	
+	function getFilesLanguage(){
+		$directorioBase = '../../edes.v3'; 
+		//$directorioBase = '..'; 
+		
+		$resultado = buscarFicherosLng($directorioBase, '/\.lng$/i');		// '/(\.edf|\idf)$/i'
+		$dim = array(array("", ""));
+		for($i=0; $i<count($resultado); $i++){
+			array_push($dim, array('$'.$resultado[$i], '$'.$resultado[$i]));
+		}
+		return $dim;
+	}
+	
+[Note]
+	/**
+	 * Lee un fichero, busca texto entre pares de "@", y devuelve 
+	 * un array de resultados ordenado por línea (descendente) y columna (descendente).
+	 *
+	 * @param string $nombreFichero Ruta al fichero a leer.
+	 * @return array Matriz de arrays asociativos con los datos extraídos.
+	 */
+	function buscarTextoEntreArrobasYOrdenar($nombreFichero){
+	    $resultados = array();
+	    
+	    $fichero = fopen($nombreFichero, 'r');
+	    if( !$fichero ){
+	        die("Error: No se pudo abrir el fichero '{$nombreFichero}'.");
+	    }
+	
+	    $numeroLinea = 0;
+	    $patron = '/@(.*?)@/';
+	
+	    while( ($linea = fgets($fichero)) !== false ){
+	        $numeroLinea++;
+	        $lineaLimpia = trim($linea); 
+	
+	        if( preg_match_all($patron, $lineaLimpia, $coincidencias, PREG_OFFSET_CAPTURE) ){
+	            
+	            foreach( $coincidencias[1] as $coincidencia ){
+	                
+	                $textoExtraido = $coincidencia[0];
+	                $posicionInicio = $coincidencia[1];
+	                $columna = $posicionInicio + 1;
+	                $longitud = strlen($textoExtraido);
+	
+	                // 1. Almacenar los datos como un array asociativo
+	                $resultados[] = array(
+	                    'linea'    => $numeroLinea,
+	                    'columna'  => $columna,
+	                    'longitud' => $longitud,
+	                    'texto'    => $textoExtraido
+	                );
+	            }
+	        }
+	    }
+	    fclose($fichero);
+	
+	    // 2. Aplicar el ordenamiento personalizado con usort()
+	    usort($resultados, funcSortInLine);
+	
+	    // 3. Formatear la matriz final según el requisito "linea|columna|longitud|texto"
+	    $resultadosFormateados = array();
+	    foreach( $resultados as $item ){
+	        array_push( $resultadosFormateados, "{$item['linea']}|{$item['columna']}|{$item['longitud']}|{$item['texto']}" );
+	    }
+	
+	    return $resultadosFormateados;
+	}
+	
+	function funcSortInLine($a, $b){
+        // Criterio 1: Ordenar por LÍNEA descendente (mayor número de línea primero)
+        if( $a['linea'] !== $b['linea'] ){
+            //return $b['linea'] <=> $a['linea']; // PHP 7+ Spaceship Operator
+            // Para PHP 5.4, usa: return ($a['linea'] < $b['linea']) ? 1 : -1; 
+			if( $a['linea'] < $b['linea'] ){
+			    return 1; // Coloca $b (el mayor) antes de $a
+			}elseif( $a['linea'] > $b['linea'] ){
+			    return -1; // Coloca $a (el mayor) antes de $b
+			}else{
+			    return 0; // Son iguales
+			}			
+        }
+
+        // Criterio 2: Si las líneas son iguales, ordenar por COLUMNA descendente 
+        // (mayor número de columna [más lejana] primero)
+        if( $a['columna'] !== $b['columna'] ){
+            //return $b['columna'] <=> $a['columna']; // PHP 7+ Spaceship Operator
+            // Para PHP 5.4, usa: return ($a['columna'] < $b['columna']) ? 1 : -1; 
+			if( $a['columna'] < $b['columna'] ){
+			    return 1; // Coloca $b (el mayor) antes de $a
+			}elseif( $a['columna'] > $b['columna'] ){
+			    return -1; // Coloca $a (el mayor) antes de $b
+			}else{
+			    return 0; // Son iguales
+			}			
+        }
+
+        // Si línea y columna son iguales, no hay cambio de orden
+        return 0;
+    }
+
+	// Para PHP 5.4, reemplaza el operador <=> en usort
+	function custom_usort_comparator($a, $b){
+	    // Línea descendente (última primero)
+	    if( $a['linea'] !== $b['linea'] ){
+	        return ($a['linea'] < $b['linea']) ? 1 : -1; 
+	    }
+	    // Columna descendente (más lejana primero)
+	    if( $a['columna'] !== $b['columna'] ){
+	        return ($a['columna'] < $b['columna']) ? 1 : -1; 
+	    }
+	    return 0;
+	}
+		
+	// -----------------------------------------------------
+	
+	// Crear un fichero de ejemplo
+	$testContent  = "Línea 1: @A@ @C@ .hjhj22222\n"; // Posiciones relativas de texto: 12 (A), 16 (C)
+	$testContent .= "Línea 2: @B@.\n";    // Posición relativa de texto: 12 (B)
+	$testContent .= "Línea 3: @Z@.\n";    // Posición relativa de texto: 12 (Z)
+	$testContent .= "Línea 4: @D6@ @E45@ @F123@.\n"; // Posiciones relativas de texto: 12 (D), 16 (E), 20 (F)
+	file_put_contents('datos_prueba_orden.txt', $testContent);
+	
+	$ficheroAProcesar = 'datos_prueba_orden.txt';
+	
+	
+	// La función principal usa la sintaxis de clausura anónima, compatible con PHP 5.3+
+	// Si realmente usas PHP 5.4, el código usort con la función anónima debería funcionar,
+	// pero si tienes problemas con el operador <=> (que es PHP 7+), debes reemplazarlo.
+	// Aquí asumimos que usas PHP 5.4 y el operador <=> lo comento.
+	
+	$resultadosFinales = buscarTextoEntreArrobasYOrdenar($ficheroAProcesar);
+	
+	
+	echo "Resultados ordenados (Línea DESC, Columna DESC):\n";
+	echo "------------------------------------------------\n";
+	print_r($resultadosFinales);
+	
+[Note] 
+	// y pasarlo a fichero plano ?
+	create table gs_op_translate (
+		id		 int(10) unsigned NOT NULL auto_increment,
+		type	 char(1) not null,
+		new_data char(1),
+		text	 varchar(100) not null,
+		text_en  varchar(100) null,
+		text_fr  varchar(100) null,
+		text_ct  varchar(100) null,
+		text_cs  varchar(100) null,
+		PRIMARY KEY (id),
+		UNIQUE gs_op_translate (text)
+	);
+	
+[Note] script_idioma.php
+	/*
+		table   [0] => gs_op
+		field   [1] => caption_en='212'
+		update	212
+		seek	[2] => id='15' and type='C'
+	*/
+	
+	
+	$data = explode( '|', urldecode($_SERVER['QUERY_STRING']) );
+	
+	ePrintR($data, $_GET, $_POST );
+	
+	die("ok");
+	
+[Note]
+[DBRange] ? | instant | _desde| _hasta
+
+[FIELDS] ?
+.   Label          | Field        | TE  | TC | Lng | Px | Mod | Default | Cnd | Msg Error
+    Instante desde | _desde       | F4  | T  | 10  |    | QF  | #today# |     | 
+   ,               | _desde_hours | H   | T  | 8   |    | Q   |         |     | 
+   ,Hasta          | _hasta       | F4  | T  | 10  |    | QF  |         |     | 
+   ,               | _hasta_hours | H   | T  | 8   |    | Q   |         |     | 	
+    Instante       | instant      | CDI | T  | 19  |    | -   |         |     | 
+
+[Note]
+
+[DBTable] auto
+[DBIndex] cd_auto
+[DBOrder] cd_auto
+
+[Fields]
+    Cd auto       | cd_auto       | D  | T  | 2   |    | AQ  |         | #   | 
+    Nm auto       | nm_auto       | D  | T  | 20  |    | M   |         | #   | 
+    Comarca       | comarca       | D  | T  | 1   |    | M   |         |     | 
+    Imp uar       | imp_uar       | -, | T  | 7,2 |    | M   |         | #   | 
+    Fadi          | fadi          | D  | T  | 1   |    | M   |         |     | 
+    Fococ99       | fococ99       | D  | T  | 1   |    | M   |         |     | 
+    Fc mano       | fc_mano       | D  | T  | 1   |    | M   |         |     | 
+    Orec irpf     | orec_irpf     | D  | T  | 8   |    | M   |         |     | 
+    Alerta carnet | alerta_carnet | -  | T  | 9   |    | M   |         |     | 
+	
+   {H} myRef
+	
+    Stop carnet   | stop_carnet   | -  | T  | 9   |    | M   |         |     | 
+    Cd idioma     | cd_idioma     | 0  | S  | 4   |    | MQ  |         |     | 
+    Bilingue      | bilingue      | D  | T  | 1   |    | M   |         |     | 
+
+
+
+[H] myRef
+	<table border=1>
+		<tr>
+			<td height="10" width="600" cellpadding="1" cellspacing="1" align=center>
+				<strong>
+					<font color="#ff0f00" size="3"> AVISO </font>
+				</strong>
+			</td>
+		</tr>
+	</table>
+
+
+[Note]
+/*
+	top.eCallSrv(window,'cargaDatos=&dni='+eGF('dni')+'&_DB=oracle');
+	
+	[CallSrv] cargaDatos
+		qQuery("select nombre,apel from afiliado where dni='{$dni}'",$p);
+		$row=qArray($p);
+		if($row['nombre']==''){
+
+		
+	echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">';
+	echo '<HTML><HEAD>';
+	echo '<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">'.$__Enter;
+	echo "<META gsScript='F:{$Fichero}' gsOp='{$Opcion}'>".$__Enter;
+	echo "<TITLE>{$_WINTITLE}</TITLE>".$__Enter;
+	echo '</HEAD>';
+	echo '<BODY onload="CopySelect();">';
+	
+	echo "<TABLE INIT=0 id='{$_DESTINO_}_TABLE' onmouseover='_SelCursor(true)' onmouseout='_SelCursor(false)' border=0 cellspacing=0 cellpadding=2 cols=2>";
+	echo '<COL id=o><COL>';
+	$Dim = array(); $ii = -1;
+	$Dim[++$ii] = array('','&nbsp;');
+	if( $_ADDOPTIONVALUE!='' ){
+	$tmp = explode(',',str_replace(' ','',$_ADDOPTIONVALUE));
+	if( $NMATRIBUTE!='' ){
+	echo '<COL id=o NM_ATRIBUTE='.$NMATRIBUTE.'>';
+	}else{
+	for( $i=0; $i<count($tmp); $i++ ) echo '<COL id=o NM_ATRIBUTE='.$tmp[$i].'>';
+	}
+	
+	echo "padre.DGI('_INPUT_{$_DESTINO_}').eFilter=2;";
+	echo "padre.DGI('_INPUT_{$_DESTINO_}').className = 'FcFilterOff';";
+	echo "padre.DGI('{$_DESTINO_}').className = 'FcFilterOff';";
+	if( $SoloEsteReg<>"" ) echo "padre.ePF('{$_DESTINO_}','{$SoloEsteReg}');";
+*/

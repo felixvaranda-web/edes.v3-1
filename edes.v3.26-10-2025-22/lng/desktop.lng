@@ -1,0 +1,171 @@
+[Language] es,ca,en,fr,cs
+1|Acción no permitida|Acció no permesa|Action not allowed|Action non autorisée|Akce není povolena
+2|Últimos ficheros descargados|ÚLTIMS FITXERS DESCARREGATS|Last downloaded files|Derniers fichiers téléchargés|Poslední stažené soubory
+3|Opciones memorizadas|OPCIONS MEMORITZADES|Stored options|Options mémorisées|Uložené možnosti
+4|Cerrar|Tancar|Close|Fermer|Zavřít
+5|Confirmar la opción de cerrar|Confirmar l´opció de TANCAR|Confirm the close option|Confirmer l'option de fermer|Potvrdit možnost zavřít
+6|Cargando...|Carregant...|Charging...|Chargement...|Načítání...
+7|Domingo|Diumenge|Sunday|Dimanche|Neděle
+8|Lunes|Dilluns|Monday|Lundi|Pondělí
+9|Martes|Dimarts|Tuesday|Mardi|Úterý
+10|Miércoles|Dimecres|Wednesday|Mercredi|Středa
+11|Jueves|Dijous|Thursday|Jeudi|Čtvrtek
+12|Viernes|Divendres|Friday|Vendredi|Pátek
+13|Sábado|Dissabte|Saturday|Samedi|Sobota
+14|Alias no encontrado|Àlies no definit|Aliases not found|Alias non trouvé|Alias nenalezen
+15|No existe el fichero "#"|No existeix el fitxer "#"|There is no file "#"|Le fichier "#" n'existe pas|Soubor "#" neexistuje
+16|No se puede leer el fichero "#"|No es pot llegir el fitxer "#"|Cannot read file "#"|Impossible de lire le fichier "#"|Nelze přečíst soubor "#"
+17|Mostrar Menú|Mostrar Menú|Show menu|Afficher Menu|Zobrazit Menu
+18|Ultimas opciones|Ultimes opcions|Last options|Dernières options|Poslední možnosti
+19|Ocultar Menú|Ocultar Menú|Hide menu|Masquer Menu|Skrýt Menu
+20|Mensaje|Missatge|Message|Message|Zpráva
+21|Confirmar|Confirmar|Confirm|Confirmer|Potvrdit
+22|Confirmar gsStore de "#"|Confirmar gsStore de "#"|Confirm gsStore of "#"|Confirmer gsStore de "#"|Potvrdit gsStore pro "#"
+23|Ejecutar la opción de "#"|Executar l´opció de "#"|Execute the "#" option|Exécuter l'option de "#"|Spustit možnost "#"
+24|Sistema ocupado|Sistema ocupat|System busy|Système occupé|Systém zaneprázdněn
+25|Aviso|Avís|Warning|Avertissement|Upozornění
+26|Opción no implementada|Opció no implementada|Option not implemented|Option non implémentée|Možnost není implementována
+27|Esta opción no se puede ejecutar en una subventana|Aquesta opció no es pot executar en una subventana|This option cannot be executed in a subwindow|Cette option ne peut pas être exécutée dans une sous-fenêtre|Tato možnost nelze spustit v podokně
+28|Novedades|Novetats|News|Nouveautés|Novinky
+29|Ver Fuente|Veure Font|View Source|Voir Source|Zobrazit Zdroj
+30|Fijar visor|Fixar visor|Set viewer|Définir le visualiseur|Nastavit prohlížeč
+31|Zoom Screen|Zoom Screen|Zoom screen|Zoom Écran|Zoom Obrazovky
+32|Editar preguntando fuente|Editar preguntant font|Edit asking source|Éditer en demandant la source|Upravit s dotazem na zdroj
+33|Borra ficheros temporales|Esborra fitxers temporals|Delete temporary files|Supprimer fichiers temporaires|Smazat dočasné soubory
+34|Editar|Editar|Edit|Éditer|Upravit
+35|DF Privado|DF Privat|DF Private|DF Privé|DF Soukromý
+36|Get/Put Objetos|Get/Put Objectes|Get/Put Objects|Get/Put Objets|Get/Put Objekty
+37|Campos del Formulario/Listado|Camps del Formulari/LListat|Form/List Fields|Champs du Formulaire/Liste|Pole Formuláře/Seznamu
+38|Ver eCallSrv()|Veure eCallSrv()|See eCallSrv()|Voir eCallSrv()|Zobrazit eCallSrv()
+39|RunScript|RunScript|Runscript|RunScript|RunScript
+40|Ejecuta formulario memorizado|Executa formulari memoritzat|Execute memorized form|Exécuter formulaire mémorisé|Spustit uložený formulář
+41|Error en la entrada|ERROR EN L´ENTRADA|Input error|ERREUR D'ENTRÉE|Chyba vstupu
+42|Error de configuración|ERROR DE CONFIGURACIÓ|Configuration error|ERREUR DE CONFIGURATION|Chyba konfigurace
+43|Sin conexsión ldap|SENSE CONNEXIÓ LDAP|No ldap connection|SANS CONNEXION LDAP|Bez připojení ldap
+44|Usuario desconocido|USUARI DESCONEGUT|Unknown user|UTILISATEUR INCONNU|Neznámý uživatel
+45|Usuario sin permiso|USUARI SENSE PERMIS|User without permission|UTILISATEUR SANS PERMISSION|Uživatel bez oprávnění
+46|Login desconocido|LOGIN DESCONEGUT|Unknown login|LOGIN INCONNU|Neznámé přihlášení
+47|Clave desconocida|CLAU DESCONEGUDA|Unknown key|CLÉ INCONNUE|Neznámý klíč
+48|Permiso caducado|PERMÍS CADUCAT|Expired permit|PERMISSION EXPIRÉE|Oprávnění vypršelo
+49|Usuario no autorizado|USUARI NO AUTORITZAT|Unauthorized user|UTILISATEUR NON AUTORISÉ|Neautorizovaný uživatel
+50|Error: permisos heredados|ERROR: PERMISOS HERETATS|Error: inherited permissions|ERREUR: PERMISSIONS HÉRITÉES|Chyba: zděděná oprávnění
+51|Error: rol sin permiso|ERROR: ROL SENSE PERMISO|Error: role without permission|ERREUR: RÔLE SANS PERMISSION|Chyba: role bez oprávnění
+52|Error: permisos no definidos|ERROR: PERMISOS NO DEFINITS|Error: permissions not defined|ERREUR: PERMISSIONS NON DÉFINIES|Chyba: oprávnění nejsou definována
+53|Error: árbol de opciones no autorizado|ERROR: ARBRE DE OPCIONS NO AUTORITZAT|Error: unauthorized tree of options|ERREUR: ARBRE D'OPTIONS NON AUTORISÉ|Chyba: strom možností není autorizován
+54|Error: árbol de opciones no encontrado|ERROR: ARBRE DE OPCIONS NO OPOSAT|Error: option tree not found|ERREUR: ARBRE D'OPTIONS NON TROUVÉ|Chyba: strom možností nebyl nalezen
+55|Error: sin permisos para el nuevo árbol de opciones|ERROR: SENSE PERMISOS PER AL NOU ARBRE D´OPCIONS|Error: no permissions for new options tree|ERREUR: SANS PERMISSIONS POUR LE NOUVEL ARBRE D'OPTIONS|Chyba: bez oprávnění pro nový strom možností
+56|Error: explorador sin configurar|ERROR: EXPLORADOR SENSE CONFIGURAR|Error: browser not configured|ERREUR: EXPLORATEUR NON CONFIGURÉ|Chyba: prohlížeč není konfigurován
+57|configurar|configurar|Set up|Configurer|Konfigurovat
+58|Mensaje: intranet fuera de horario|MISSATGE: INTRANET FOS D´HORARI|Message: intranet out of hours|MESSAGE: INTRANET HORS HORAIRE|Zpráva: intranet mimo provozní hodiny
+59|Error: nodo no autorizado|ERROR: NODE NO AUTORITZAT|Error: unauthorized node|ERREUR: NŒUD NON AUTORISÉ|Chyba: uzel není autorizován
+60|Error: nodo con permiso caducado|ERROR: NODE AMB PERMÍS CADUCAT|Error: node with expired permission|ERREUR: NŒUD AVEC PERMISSION EXPIRÉE|Chyba: uzel s vypršeným oprávněním
+61|Error: navegador desconocido|ERROR: NAVEGADOR DESCONEGUT|Error: unknown browser|ERREUR: NAVIGATEUR INCONNU|Chyba: neznámý prohlížeč
+62|Error: navegador no soportado|ERROR: NAVEGADOR NO SUPORTAT|Error: unsupported browser|ERREUR: NAVIGATEUR NON SUPPORTÉ|Chyba: nepodporovaný prohlížeč
+63|Error: resolucion demasiado baja|ERROR: RESOLUCIÓ MASSA BAIXA|Error: resolution too low|ERREUR: RÉSOLUTION TROP BASSE|Chyba: příliš nízké rozlišení
+64|Error desconocido|ERROR DESCONEGUT|Unknown error|ERREUR INCONNUE|Neznámá chyba
+65|Mensaje<br>versión del navegador no soportada<br>versión mínima: #|MISSATGE<br>VERSIÓ DEL NAVEGADOR NO SUPORTADA<BR>Versió mínima: #|Message<br>browser version not supported<br>minimum version: #|MESSAGE<br>VERSION DU NAVIGATEUR NON SUPPORTÉE<BR>Version minimale: #|Zpráva<br>verze prohlížeče není podporována<br>minimální verze: #
+66|Acceso restringido|ACCÉS RESTRINGIT|Restricted access|ACCÈS RESTREINT|Omezený přístup
+67|Intranet reactivada|INTRANET REACTIVADA|Intranet reactivated|INTRANET RÉACTIVÉE|Intranet reaktivován
+68|Error: sin permiso para reactivar intranet|ERROR: SENSE PERMÍS PER REACTIVAR INTRANET|Error: no permission to reactivate intranet|ERREUR: SANS PERMISSION POUR RÉACTIVER INTRANET|Chyba: bez oprávnění k reaktivaci intranetu
+69|Click Izq: Copia el contenido del formulario|Click ESQ: Còpia el contingut del formulari|Click Left: Copy the content of the form|Clic Gauche: Copier le contenu du formulaire|Klik Levý: Kopíruje obsah formuláře
+70|Click Izq: Rellena el formulario con los campos copiados|Click Izq: Emplena el formulari amb els camps copiats|Click Left: Fill in the form with the copied fields|Clic Gauche: Remplir le formulaire avec les champs copiés|Klik Levý: Vyplní formulář zkopírovanými poli
+71|Oculta Escritorio y SubVentana siempre visible|Oculta Escriptori i SubVentana sempre visible|Hide desktop and subwindow always visible|Masquer Bureau et Sous-fenêtre toujours visible|Skrýt Plochu a Podokno vždy viditelné
+72|Memoriza formulario|Memoritza formulari|Memorize form|Mémoriser formulaire|Uložit formulář
+73|Ejecuta formulario memorizado|Executa formulari memoritzat|Execute memorized form|Exécuter formulaire mémorisé|Spustit uložený formulář
+74|Ventanas minimizadas|FINESTRES MINIMITZADES|Minimized windows|FENÊTRES MINIMISÉES|Minimalizovaná okna
+75|Aceptar|Aceptar|Accept|Accepter|Přijmout
+76|Si|Si|Yes|Oui|Ano
+77|No|No|No|Non|Ne
+78|Cancelar|Cancel·lar|Cancel|Annuler|Zrušit
+79|Confirmar la opción de imprimir|Confirmar l´opció d´imprimir|Confirm print option|Confirmer l'option d'imprimer|Potvrdit možnost tisku
+80|Error|ERROR|Error|ERREUR|Chyba
+81|Visor Escritorio Remoto|Visor Escriptori Remot|Remote desktop viewer|Visualiseur Bureau à distance|Prohlížeč Vzdálené Plochy
+82|Click Izq: Ventanas minimizadas|Click Izq: Finestres minimitzades|Click Left: Minimized Windows|Clic Gauche: Fenêtres minimisées|Klik Levý: Minimalizovaná okna
+83|Click Izq: Ultimos ficheros y páginas memorizadas|Click ESQ: Últims fitxers i pàgines memoritzades|Click Left: Last files and pages stored|Clic Gauche: Derniers fichiers et pages mémorisés|Klik Levý: Poslední soubory a uložené stránky
+84|Mapa de opciones|Mapa d´opcions|Options map|Carte des options|Mapa možností
+85|Chat|Chat|Chat|Chat|Chat
+86|Ayuda general|Ajuda general|General help|Aide générale|Obecná nápověda
+87|Ayuda de teclado|AJUDA DE TECLAT|Keyboard help|AIDE CLAVIER|Nápověda klávesnice
+88|Ayuda de teclado|Ajuda de teclat|Keyboard help|Aide clavier|Nápověda klávesnice
+89|Avisos|Avisos|Notices|Avis|Upozornění
+90|Novedades|Novetats|News|Nouveautés|Novinky
+91|Listado a Excel|Llistat a Excel|List to Excel|Liste vers Excel|Seznam do Excelu
+92|Extracciones|Extraccions|Extractions|Extractions|Extrakce
+93|Click Izq: Imprimir Ficha/Listado\nClick Dch: Imprimir Grupo de Fichas\nControl Click: Imprimir Desktop|Click ESQ: Imprimir Fitxa/LListat\nClick DRET: Imprimir Grup de Fitxes\nControl Click: Imprimir Desktop|Click Left: Print File/List\nClick Right: Print Group of Files\nControl Click: Print Desktop|Clic Gauche: Imprimer Fiche/Liste\nClic Droit: Imprimer Groupe de Fiches\nCtrl Clic: Imprimer Bureau|Klik Levý: Tisk Karty/Seznamu\nKlik Pravý: Tisk Skupiny Karet\nCtrl Klik: Tisk Plochy
+94|Bloquear aplicación|Bloquejar aplicació|Lock app|Bloquer application|Zamknout aplikaci
+95|Minimizar|Minimitzar|Minimize|Minimiser|Minimalizovat
+96|Cerrar|Tancar|Close|Fermer|Zavřít
+97|Confirmar la opción de cerrar|Confirmar l´opció de TANCAR|Confirm the close option|Confirmer l'option de fermer|Potvrdit možnost zavřít
+98|Maximizar|Maximitzar|Maximize|Maximiser|Maximalizovat
+99|Nombre del Nodo|Nom del Node|Node name|Nom du Nœud|Název Uzlu
+100|Tamaño fuente extragrande|Grandària font extragran|Extra large font size|Taille de police extra grande|Velikost písma extra velká
+101|Tamaño fuente grande|Grandària font gran|Large font size|Taille de police grande|Velikost písma velká
+102|Tamaño fuente normal|Grandària font normal|Regular font size|Taille de police normale|Velikost písma normální
+103|El acceso se bloqueará durante # minutos|L´accés es bloquejarà durant # minuts|Access will be blocked for # minutes|L'accès sera bloqué pendant # minutes|Přístup bude zablokován po dobu # minut
+104|Quedan # minutos de inactibidad<br>por acumulación de intentos erróneos|Queden # minuts d´inactivitat<br>per acumulació d|There are # minutes left of inactivity<br>due to accumulation of wrong attempts|Il reste # minutes d'inactivité<br>par accumulation de tentatives erronées|Zbývá # minut nečinnosti<br>z důvodu nahromadění chybných pokusů
+105|Bloquear Windows|Bloquejar Windows|Lock windows|Bloquer Windows|Zamknout Windows
+106|Hacer Click para ocultar|Fer Clic per ocultar|Click to hide|Cliquer pour masquer|Kliknutím skryjete
+107|Tamaño fuente|Grandària font|Font size|Taille de police|Velikost písma
+108|Enviando fichero...|Enviant fitxer...|Sending file...|Envoi du fichier...|Odesílání souboru...
+109|Grabado|Gravat|Recorded|Enregistré|Uloženo
+110|Seleccionar solapa|Seleccionar solapa|Select tab|Sélectionner onglet|Vybrat záložku
+111|Clave de usuario reseteada|Clau d'usuari resetejada|Reset user password|Mot de passe utilisateur réinitialisé|Heslo uživatele resetováno
+112|Clave reseteada enviada por email|Clau resetejada enviada per email|Reset password sent by email|Mot de passe réinitialisé envoyé par email|Resetované heslo odesláno e-mailem
+113|Clave reseteada con valor por defecto|Clau resetejada amb valor per defecte|Password reset with default value|Mot de passe réinitialisé avec valeur par défaut|Heslo resetováno s výchozí hodnotou
+114|Clave temporal enviada por email<br>la clave caducará en 12 horas.|Clau temporal enviada per email<br>la clau caducarà en 12 hores.|Temporary password sent by email<br>the key will expire in 12 hours.|Mot de passe temporaire envoyé par email<br>la clé expirera dans 12 heures.|Dočasné heslo odesláno e-mailem<br>klíč vyprší za 12 hodin.
+115|Clave temporal caducada|Clau temporal caducada|Temporary key expired|Clé temporaire expirée|Dočasný klíč vypršel
+116|Se ha solicitado una clave temporal|S'ha sol·licitat una clau temporal|A temporary key has been requested|Une clé temporaire a été demandée|Byl vyžádán dočasný klíč
+117|Calculando...|Calculant...|Calculated...|Calcul en cours...|Počítání...
+118|Imprimir|Imprimir|Print|Imprimer|Tisk
+119|Filtrar...|Filtrar...|Filter...|Filtrer...|Filtrovat...
+120|Preferencias|Preferències|preferences|Préférences|Předvolby
+121|Click Izq: Expandir menú|Clic ESQ: Expandir menú|Click Left: Expand menu|Clic Gauche: Développer le menu|Klik Levý: Rozbalit menu
+122|Click Izq: Imprime pantalla|Clic ESQ: Imprimeix pantalla|Click Left: Print screen|Clic Gauche: Imprimer l'écran|Klik Levý: Tisk obrazovky
+123|Cerrar sesión|Tancar sessió|Sign off|Déconnexion|Odhlásit se
+124|Cambiar contraseña|Canviar contrasenya|Change Password|Changer le mot de passe|Změnit heslo
+125|Ventanas minimizadas|Finestres minimitzades|Minimized windows|Fenêtres minimisées|Minimalizovaná okna
+126|Maximizar pantalla|Maximitzar pantalla|Maximize screen|Maximiser l'écran|Maximalizovat obrazovku
+127|Ayuda de teclado|Ajuda de teclat|Keyboard help|Aide clavier|Nápověda klávesnice
+128|Entrar al Chat|Entrar al Chat|Enter the Chat|Entrer au Chat|Vstoupit do Chatu
+129|Mensajes pendientes|Missatges pendents|Pending messages|Messages en attente|Čekající zprávy
+130|Preferencias|Preferències|Preferences|Préférences|Předvolby
+131|Comprimir Menú|Comprimir Menú|Compress menu|Compresser Menu|Sbalit Menu
+132|Expandir Menú|Expandir Menú|Expand menu|Développer Menu|Rozbalit Menu
+133|Fijar Menú|Fixar Menú|Set menu|Fixer Menu|Upevnit Menu
+134|Liberar Menú|Alliberar Menú|Release menu|Libérer Menu|Uvolnit Menu
+135|Comprimir Banner|Comprimir Banner|Compress banner|Compresser Bannière|Sbalit Banner
+136|Expandir Banner|Expandir Banner|Expand banner|Développer Bannière|Rozbalit Banner
+137|Último acceso|Últim accés|Last access|Dernier accès|Poslední přístup
+138|Entrada|Entrada|Entrance|Entrée|Vstup
+139|Salida|Sortida|Exit|Sortie|Výstup
+140|Error: Inténtelo de nuevo|Error: Intenteu-ho de nou|Error: Try again|Erreur: Réessayez|Chyba: Zkuste to znovu
+141|Error: Código de verificación|Error: Codi de verificació|Error: Verification code|Erreur: Code de vérification|Chyba: Ověřovací kód
+142|Error: Indeterminado|Error: Indeterminat|Error: Undetermined|Erreur: Indéterminée|Chyba: Neurčeno
+143|Aplicación cerrada|Aplicació tancada|Application closed|Application fermée|Aplikace uzavřena
+144|Error: no hay conexión con la ddbb|Error: no hi ha connexió amb la ddbb|Error: no connection to ddbb|Erreur: pas de connexion à la ddbb|Chyba: není připojení k ddbb
+145|Error: empresa no permitida|Error: empresa no permesa|Error: company not allowed|Erreur: entreprise non autorisée|Chyba: společnost není povolena
+146|Acceso bloqueado durante 10:00 minutos|Accés bloquejat durant 10:00 minuts|Access blocked for 10:00 minutes|Accès bloqué pendant 10:00 minutes|Přístup zablokován na 10:00 minut
+147|Error: Sessión caducada|Error: Sessió caducada|Error: Session Expired|Erreur: Session expirée|Chyba: Relace vypršela
+148|Empresa de baja en el servicio desde #|Empresa de baixa en el servei des de #|Company deregistered from service since #|Entreprise désinscrite du service depuis #|Společnost odhlášena ze služby od #
+149|Falta el fichero "#"|Falta el fitxer "#"|Missing file "#"|Fichier "#" manquant|Chybí soubor "#"
+150|Clave temporal caducada|Clau temporal caducada|Temporary key expired|Clé temporaire expirée|Dočasný klíč vypršel
+151|Acceso bloqueado hasta las #|Accés bloquejat fins a les #|Access blocked until #|Accès bloqué jusqu'à #|Přístup zablokován do #
+152|Sistema parado por mantenimiento|Sistema aturat per manteniment|System stopped for maintenance|Système arrêté pour maintenance|Systém zastaven kvůli údržbě
+153|Tiempo expirado para confirmar acceso|Temps expirat per confirmar accés|Time expired to confirm access|Délai expiré pour confirmer l'accès|Čas vypršel pro potvrzení přístupu
+154|Verificación en dos pasos erronea|Verificació en dos passos errònia|Two-step verification failed|Vérification en deux étapes échouée|Ověření ve dvou krocích selhalo
+155|Falta el fichero "#" del banner|Falta el fitxer "#" del banner|Missing file "#" of the banner|Fichier "#" de la bannière manquant|Chybí soubor "#" banneru
+156|Falta el directorio "#"|Falta el directori "#"|Missing directory "#"|Dossier "#" manquant|Chybí adresář "#"
+157|Ficheros que faltan|Fitxers que falten|Missing files|Fichiers manquants|Chybějící soubory
+158|Centro de Descargas|Centre de Descàrregues|Download Center|Centre de Téléchargement|Centrum stahování
+159|Opciones favoritas|Opcions preferides|Favorite options|Options favorites|Oblíbené možnosti
+160|Ficheros subidos en segundo plano|Fitxers pujats en segon pla|Files uploaded in background|Fichiers téléchargés en arrière-plan|Soubory nahrané na pozadí
+161|Cambie la clave para continuar|Canvieu la clau per continuar|Change your password to continue|Changez la clé pour continuer|Změňte heslo pro pokračování
+162|Documento de seguridad|Document de seguretat|Security document|Document de sécurité|Bezpečnostní dokument
+163|El plazo para confirmar a través del correo electrónico ha expirado|El termini per confirmar a través del correu electrònic ha expirat|The deadline to confirm via email has expired|Le délai pour confirmer par courrier électronique a expiré|Lhůta pro potvrzení e-mailem vypršela
+164|Mostrar migas|Mostrar molles|Show breadcrumb|Afficher fil d'Ariane|Zobrazit drobečkovou navigaci
+165|Ocultar migas|Ocultar molles|Hide breadcrumb|Masquer fil d'Ariane|Skrýt drobečkovou navigaci
+166|Expandir migas|Expandir molles|Expand breadcrumb|Développer fil d'Ariane|Rozbalit drobečkovou navigaci
+167|Comprimir migas|Comprimir molles|Compress breadcrumb|Compresser fil d'Ariane|Sbalit drobečkovou navigaci
+168|Ampliar sesión|Ampliar sessió|Extend session|Prolonger session|Rozšířit relaci
+169|Dispositivo no registrado|Dispositiu no registrat|Device not registered|Appareil non enregistré|Zařízení není registrováno
+170|Cambiar idioma|Canviar idioma|Change language|Changer de langue|Změnit jazyk

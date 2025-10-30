@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bienvenido a MiCompañia</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+}
+.email-container {
+max-width: 600px;
+margin: 0 auto;
+background-color: #ffffff;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.header {
+background-color: #007bff;
+padding: 20px;
+text-align: center;
+}
+.logo {
+max-width: 150px;
+height: auto;
+}
+.company-name {
+color: #ffffff;
+font-size: 24px;
+font-weight: bold;
+margin-top: 10px;
+}
+.content {
+padding: 30px;
+}
+.welcome-text {
+font-size: 18px;
+color: #333;
+margin-bottom: 20px;
+}
+.password-box {
+background-color: #f8f9fa;
+border: 2px dashed #007bff;
+border-radius: 5px;
+padding: 15px;
+margin: 20px 0;
+text-align: center;
+}
+.temp-password {
+font-size: 20px;
+font-weight: bold;
+color: #007bff;
+font-family: 'Courier New', monospace;
+}
+.confirm-button {
+display: block;
+width: 200px;
+margin: 30px auto;
+padding: 12px 20px;
+background-color: #28a745;
+border-color: #28a745;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+text-align: center;
+font-weight: bold;
+}
+.footer {
+background-color: #343a40;
+color: #ffffff;
+padding: 20px;
+text-align: center;
+font-size: 12px;
+}
+.security-note {
+background-color: #fff3cd;
+border: 1px solid #ffeaa7;
+border-radius: 5px;
+padding: 10px;
+margin: 20px 0;
+font-size: 12px;
+color: #856404;
+}
+</style>
+</head>
+<body>
+<div class="email-container">
+<!-    <div class="header">
+<img src="{LOGO}" alt="Logo" class="logo">
+<!-    </div>
+<!-       <div class="content">
+<h1 class="welcome-text">¡Bienvenido a {$COMPANY}!</h1>
+<p>Hola {USER_NAME},</p>
+<p>Te damos la bienvenida a nuestra plataforma. Tu cuenta ha sido creada exitosamente.</p>
+<p>Para completar el proceso de registro, necesitas confirmar tu dirección de email.</p>
+<!--          <div class="password-box">
+<p>Tu contraseña temporal es:</p>
+<div class="temp-password">{PASSWORD}</div>
+</div>
+<!-- Not-
+<div class="security-note">
+?? <strong>Importante:</strong> Nunca compartas tu contraseña. MiCompañia nunca te pedirá tu contraseña por email.
+</div>
+-->
+<!-- Formulario de tion="{URL}" method="POST">
+<input type="hidden" name="s-device" value="[HASH_DE_DISPOSITIVO]">
+<input type="hidden" name="email" value="[EMAIL_DEL_USUARIO]">
+<input type="hidden" name="token" value="[TOKEN_DE_CONFIRMACION]">
+<button type="submit" class="confirm-button">
+Confirmar Email
+</button>
+</form>
+<!--
+<   <!-- Footer -->
+tml>

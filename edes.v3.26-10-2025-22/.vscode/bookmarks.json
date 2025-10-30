@@ -1,0 +1,279 @@
+{
+	"files": [
+		{
+			"path": "../suid/suid.php",
+			"bookmarks": [
+				{
+					"line": 13577,
+					"column": 34,
+					"label": ""
+				},
+				{
+					"line": 13954,
+					"column": 7,
+					"label": ""
+				},
+				{
+					"line": 14117,
+					"column": 16,
+					"label": ""
+				},
+				{
+					"line": 14128,
+					"column": 13,
+					"label": ""
+				},
+				{
+					"line": 15372,
+					"column": 20,
+					"label": ""
+				},
+				{
+					"line": 15429,
+					"column": 29,
+					"label": ""
+				},
+				{
+					"line": 15569,
+					"column": 35,
+					"label": ""
+				},
+				{
+					"line": 16595,
+					"column": 31,
+					"label": ""
+				},
+				{
+					"line": 16666,
+					"column": 13,
+					"label": ""
+				},
+				{
+					"line": 16678,
+					"column": 10,
+					"label": ""
+				},
+				{
+					"line": 17980,
+					"column": 9,
+					"label": ""
+				},
+				{
+					"line": 18004,
+					"column": 19,
+					"label": ""
+				},
+				{
+					"line": 18109,
+					"column": 6,
+					"label": ""
+				},
+				{
+					"line": 18884,
+					"column": 28,
+					"label": ""
+				},
+				{
+					"line": 19615,
+					"column": 9,
+					"label": ""
+				},
+				{
+					"line": 19734,
+					"column": 28,
+					"label": ""
+				},
+				{
+					"line": 20154,
+					"column": 9,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "../suid/core.php",
+			"bookmarks": [
+				{
+					"line": 99,
+					"column": 5,
+					"label": ""
+				},
+				{
+					"line": 141,
+					"column": 21,
+					"label": ""
+				},
+				{
+					"line": 192,
+					"column": 36,
+					"label": ""
+				},
+				{
+					"line": 1199,
+					"column": 0,
+					"label": ""
+				},
+				{
+					"line": 1222,
+					"column": 20,
+					"label": ""
+				},
+				{
+					"line": 1460,
+					"column": 21,
+					"label": ""
+				},
+				{
+					"line": 1610,
+					"column": 24,
+					"label": ""
+				},
+				{
+					"line": 2577,
+					"column": 13,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "../suid/src/data.elements-type.php",
+			"bookmarks": [
+				{
+					"line": 40,
+					"column": 19,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "../i_suid/public/pruebal.html",
+			"bookmarks": [
+				{
+					"line": 30,
+					"column": 9,
+					"label": ""
+				},
+				{
+					"line": 746,
+					"column": 4,
+					"label": ""
+				},
+				{
+					"line": 844,
+					"column": 19,
+					"label": ""
+				},
+				{
+					"line": 1082,
+					"column": 20,
+					"label": ""
+				},
+				{
+					"line": 1090,
+					"column": 17,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "edes.php",
+			"bookmarks": [
+				{
+					"line": 5054,
+					"column": 15,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "core.js",
+			"bookmarks": [
+				{
+					"line": 259,
+					"column": 8,
+					"label": ""
+				},
+				{
+					"line": 1045,
+					"column": 14,
+					"label": ""
+				},
+				{
+					"line": 1172,
+					"column": 60,
+					"label": ""
+				},
+				{
+					"line": 4426,
+					"column": 15,
+					"label": ""
+				},
+				{
+					"line": 13014,
+					"column": 34,
+					"label": ""
+				},
+				{
+					"line": 13180,
+					"column": 0,
+					"label": ""
+				},
+				{
+					"line": 13333,
+					"column": 6,
+					"label": ""
+				},
+				{
+					"line": 16468,
+					"column": 5,
+					"label": ""
+				},
+				{
+					"line": 18684,
+					"column": 21,
+					"label": ""
+				},
+				{
+					"line": 19193,
+					"column": 27,
+					"label": ""
+				},
+				{
+					"line": 19222,
+					"column": 15,
+					"label": ""
+				},
+				{
+					"line": 19240,
+					"column": 0,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "desktop2_web.php",
+			"bookmarks": [
+				{
+					"line": 438,
+					"column": 2,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "login_ser_web.php",
+			"bookmarks": [
+				{
+					"line": 3483,
+					"column": 22,
+					"label": ""
+				},
+				{
+					"line": 3516,
+					"column": 17,
+					"label": ""
+				}
+			]
+		}
+	]
+}
