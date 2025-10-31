@@ -18,7 +18,7 @@
 [OnChange] a | tipo_regularizacion | gestionRegularizacion()
 
 [PHPIni] *
-if (!ePermission("devolucion")) eMessage('OPCION NO PERMITIDA','HS');
+if (!ePermission("devolucion")) eMessage('OPCIÓN NO PERMITIDA','HS');
 
 
 [Fields] 2
